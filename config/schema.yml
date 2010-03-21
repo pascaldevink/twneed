@@ -1,0 +1,25 @@
+propel:
+  need:
+    id:           ~
+    author:       { type: varchar(100), required: true }
+    description:  { type: varchar(140), required: true }
+    timeframe:    { type: varchar(10), required: false }
+    location:     { type: varchar(100), required: false }
+    created_at:   ~
+    updated_at:   ~
+  raw_dm:
+    id:                 ~
+    dm_id:              { type: bigint, required: true }
+    created_at:         { type: bigint, required: true }
+    text:               { type: varchar(140), required: true }
+    follower_id:        { type: integer, foreignTable: follower, foreignReference: id, required: true }
+  follower:
+    id:                 ~
+    following:          { type: boolean, required: true }
+    sender_id:          { type: bigint, required: true }
+    sender_name:        { type: varchar(20), required: false }
+    sender_screen_name: { type: varchar(15), required: true }
+    sender_description: { type: varchar(160), required: false }
+    sender_location:    { type: varchar(255), required: false }
+    sender_protected:   { type: boolean, required: true }
+    sender_profile_img: { type: varchar(255), required: true }

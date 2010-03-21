@@ -1,0 +1,1958 @@
+/* 37signals ----------------------------------------------------*/
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: helvetica, arial, sans-serif;
+	background-color: #fff;
+	text-align: center;
+}
+
+p {
+	color: #222;
+}
+
+img { -ms-interpolation-mode:bicubic; }
+
+div.action {
+  background-color: #e69a61;
+}
+
+div.action h2 {
+	color: #3671a1;
+}
+
+div.action h2 a {
+	color: #3671a1;
+}
+
+div.top {
+	width: 980px;
+	background-color: #fff;
+	background-image: none;
+}
+
+div.header, div.site_header {
+	background-color: #efefef;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 1.7em;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;
+	padding-top: 3px;
+	border-bottom: 1px solid #ccc;
+}
+
+div.header img {
+	float: right;
+}
+
+span.highlight {
+  line-height: 1.5em;
+}
+
+/* STRUCTURE --------------------------------------------------*/
+
+div.site_header {
+	border-bottom: 0;
+	margin-bottom: 0;
+}
+
+div.pagetitle h1 {
+  font-family: helvetica, arial sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  color: #222;
+	letter-spacing: -1px;
+	margin: 0 0 20px 0;
+	padding: 11px 0 0 0;
+	text-align: left;
+}
+
+div.pagetitle h2 {
+  margin: 0;
+  text-align: left;
+  font-family: Georgia, serif;
+  font-size: 21px;
+  font-weight: normal;
+  color: #cc3333;
+}
+
+div.clear {
+  clear: both;
+}
+
+div.site_header div.links {
+  margin-top: 2px;
+}
+
+div.header div.links {
+  float: left;
+  margin-right: 20px;
+}
+
+div.header div.links a {
+  color: #222;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+div.header div.links a:hover {
+  border-bottom: 2px solid #66C7DF;
+}
+
+div.header div.sign_links {
+  float: left;
+}
+
+div.header div.sign_links a {
+  color: #0099cc;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+div.header div.sign_links a:hover {
+  border-bottom: 2px solid #66C7DF;
+}
+
+
+/* HELP ----------------------------------------------------*/
+
+div.helpsidebar {
+  width: 165px;
+  float: right;
+  background-image: url(/images/bkgd_api.jpg);
+  background-repeat: no-repeat;
+  padding: 15px;
+  text-align: left;
+  font-family: Verdana, sans-serif;
+  font-size: 11px; color: #666;
+}
+
+div.helpsidebar ul {
+	margin: 0 0 0 25px;
+	padding: 0;
+}
+
+div.helpsidebar li {
+	font-size: 11px;
+	color: #666;
+}
+
+div.helpsidebar h5 {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #333;
+  font-size: 14px;
+  margin: 10px 0 15px 0;
+  line-height: 1.3em;
+}
+
+div.helpsidebar div.appsell {
+  text-align: center;
+  margin-top: 15px;
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  color: #222;
+}
+
+div.helpcontent {
+  text-align: left;
+  width: 720px;
+}
+
+div.helpcontent h2 {
+  font-family: Georgia, serif;
+  color: #cc3333;
+  font-size: 21px;
+  font-weight: normal;
+  margin: 0;
+}
+
+body.help div.video {
+  background-color: #efefef;
+  padding: 15px;
+  padding-left: 10px;
+  width: 375px;
+  border: 1px solid #ccc;
+  font-size: 11px;
+  font-family: Verdana, sans-serif;
+}
+
+body.help div.video img {
+  margin-right: 5px;
+}
+
+div.faqgroup {
+  border-top: 1px solid #ccc;
+  margin: 30px 0 0 0;
+}
+
+body.help div.top {
+  border: 1px solid #ff9900;
+  background-color: #ffffcc;
+  padding: 15px;
+  background-image: none;
+  width: auto;
+}
+
+div.faqgroup h3 {
+  margin: 10px 0 15px 0;
+	padding: 0;
+	font-size: 14px;
+	line-height: 1.2em;
+	color: #000;
+	text-transform: uppercase;
+}
+
+div.faqgroup h3 a {
+	color: #000;
+}
+
+div.faqgroup ul {
+  margin-left: 10px;
+  padding-left: 10px;
+}
+
+div.faqgroup li {
+  margin-bottom: 5px;
+}
+
+div.faqgroup li.more {
+  list-style-type:none;
+  margin-top: 10px;
+  text-transform: none;
+}
+
+div.help_nav {
+  font-size: 16px;
+  font-family: Helvetica, Verdana, sans-serif;
+  color: #999;
+  margin-top: 20px;
+}
+
+body.help div.help_entry {
+  margin: 0 0 30px 0;
+  padding: 0 15px;
+  border: 10px solid #e8e8e8;
+  font-size: 11px;
+}
+
+div.help_entry h2 {
+  margin-bottom: 5px;
+  margin-top: 15px;
+  font-size: 21px;
+  font-weight: bold;
+  color: #222;
+  font-family: Helvetica, sans-serif;
+}
+
+div.help_entry h2.top {
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+
+body.help div.support_form {
+  margin-bottom: 30px;
+}
+
+body.help div.support_form p.details {
+	font-size: 11px;
+	font-family: verdana;
+	margin-bottom: 4px;
+}
+
+body.help div.support_form textarea {
+	width: 550px;
+	height: 200px;
+	font-family: courier,monospace;
+	font-size: 14px;
+	padding: 3px;
+	background-color: #fdfef1;
+}
+
+body.help div.support_form input {
+	width: 550px;
+	font-family: courier,monospace;
+	font-size: 14px;
+	padding: 3px;
+	background-color: #fdfef1;
+}
+
+body.help div.support_form input.shorter {
+	width: 350px;
+}
+
+div.support_form hr {
+	margin: 20px 0;
+}
+
+body.help div.support_form input.button {
+	width: auto;
+	margin-bottom: 5px;
+	font-weight: bold;
+	font-family: verdana;
+	background-color: #fff;
+}
+
+body.help div.support_form select {
+	font-size: 18px;
+	padding: 3px;
+}
+
+div.support_form h2 {
+	font-size: 14px;
+	font-weight: bold;
+	margin: 20px 0 2px 0;
+	color: #000;
+}
+
+body.help div.support_form h2 span {
+	font-size: 12px;
+	font-weight: normal;
+	color: #393;
+	font-style: italic;
+}
+
+body.help div.question_before_contact a.not_listed {
+	font-size: 11px;
+	font-family: verdana;
+}
+
+body.help div.belt h2 {
+  margin-top: 10px;
+}
+
+body.help div.buzz {
+  text-align: left;
+  width: 980px;
+}
+
+body.help div.buzz p {
+  font-size: 16px;
+  font-family: Georgia, serif;
+  font-style: normal;
+}
+
+div.openid {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  margin-top: 20px;
+  padding-bottom: 10px;
+  font-size: 14px;
+}
+
+div.openid img {
+  border: 1px solid #ccc;
+  padding: 1px;
+  margin-top: 20px;
+}
+
+div.openid h3 {
+  margin-bottom: 5px;
+}
+
+div.openid p {
+  font-size: 14px;
+}
+
+div.customerquotes {
+  width: 340px;
+  text-align: left;
+  padding: 15px;
+  padding-left: 0;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-family: Georgia, serif;
+  font-size: 16px;
+  line-height: 1.5 em;
+  float: left;
+}
+
+body.buzz div.customerquotes {
+  margin-bottom: 20px;
+}
+
+body.openbar div.customerquotes, body.openid div.customerquotes {
+  width: 720px;
+}
+
+div.customerquotes h5 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: #000;
+  font-weight: bold;
+  margin: 40px 0 5px 0;
+}
+
+div.customerquotes p {
+  font-family: Verdana, sans-serif;
+  font-size: 11px;
+  font-style: italic;
+  margin: 10px 0 0 0;
+}
+
+body.openid div.customerquotes p {
+  font-family: Georgia, serif;
+  font-size: 14px;
+  font-style: normal;
+  margin: 10px 0 0 0;
+}
+
+body.help div.end {
+  margin-left: 10px;
+}
+
+body.help div.half {
+  width: 460px;
+}
+
+div.half p {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  line-height: inherit;
+  margin: 40px 0;
+}
+
+body.id div.helpcontent {
+  text-align: left;
+  width: 720px;
+}
+
+body.id div.helpcontent h2 {
+  font-family: Georgia, serif;
+  color: #222;
+  font-size: 21px;
+  font-weight: normal;
+  line-height: 1.3em;
+  margin: 0;
+}
+
+body.id div.faqgroup {
+  border-top: 1px solid #ccc;
+  margin: 5px 0 0 0;
+  padding: 10px 0 0 0;
+}
+
+body.id div.faqgroup h3 {
+  margin: 10px 0 15px 0;
+	padding: 0;
+	font-size: 14px;
+	line-height: 1.2em;
+	color: #000;
+	text-transform: uppercase;
+}
+
+body.id div.faqgroup h3 a {
+	color: #000;
+}
+
+body.id div.faqgroup ul {
+  margin-left: 10px;
+  padding-left: 10px;
+}
+
+body.id div.faqgroup li {
+  margin-bottom: 5px;
+}
+
+body.id div.faqgroup li.more {
+  list-style-type:none;
+  margin-top: 10px;
+  text-transform: none;
+}
+
+body.id div.help_entry {
+  margin: 50px 0;
+  padding: 15px 0;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+
+body.id div.help_entry h2 {
+  margin-bottom: 10px;
+}
+
+/* CUSTOMERS -------------------------------------------------*/
+
+div.customerlogos {
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 50px;
+  background-color: #fff;
+}
+
+div.customerlogos img {
+  margin: 60px 60px 0 0;
+}
+
+div.customerlogos p {
+  margin-top: 30px;
+  font-size: 11px;
+  font-family: Verdana, sans-serif;
+  color: #666;
+}
+
+div.customer {
+  clear: both;
+  border-top: 1px solid #ccc;
+  margin-bottom: 50px;
+  text-align: left;
+}
+
+div.customer h2 {
+  margin-bottom: 20px;
+}
+
+
+/* SUBSCRIBE -------------------------------------------------*/
+
+body.subscribe div.pagetitle h1 {
+  margin: 0;
+}
+
+body.subscribe div.signup {
+  margin: 30px 0;
+  text-align: center;
+  width: 750px;
+}
+
+body.subscribe div.signup p {
+  font-family: Georgia, serif;
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+
+body.subscribe form.signup {
+  margin-left: 0;
+  padding-bottom: 10px;
+  text-align: left;
+}
+
+body.subscribe form.signup label {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
+  font-size: 14px;
+  font-weight:bold;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+body.subscribe form.signup p.additional {
+  font-family: Georgia, serif;
+  font-size: 14px;
+  padding-top: 15px;
+  margin-bottom: 0px;
+}
+
+
+body.subscribe div.signup table {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+body.subscribe div.signup td.checkbox {
+  padding-right: 5px;
+  padding-top: 10px;
+}
+
+body.subscribe div.signup td.icon {
+  padding-right: 10px;
+  padding-top: 0px;
+  }
+
+body.subscribe div.signup td.item {
+  font-family: Verdana, sans-serif;
+  color: #666;
+  font-size: 11px;
+  padding-bottom: 25px;
+}
+
+body.subscribe div.subscribe {
+  border-top: 1px solid #ccc;
+  margin-top: 50px;
+  padding: 0px;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
+  font-size: 14px;
+}
+
+body.subscribe div.subscribe table {
+  margin-left: 75px;
+}
+
+
+body.subscribe div.subscribe td.icon {
+  padding: 10px;
+  padding-right: 0px;
+}
+
+body.subscribe div.subscribe td.link {
+  padding: 5px;
+  padding-top: 15px;
+  border-right: 1px solid #ccc;
+  text-align: left;
+}
+
+body.subscribe div.subscribe td.link a {
+  text-decoration: none;
+}
+
+body.subscribe div.subscribe td.link a:hover {
+  text-decoration: underline;
+}
+
+
+/* EXTRAS ----------------------------------------------------*/
+
+div.api {
+  width: 165px;
+  float: right;
+  background-image: url(/images/bkgd_api.jpg);
+  background-repeat: no-repeat;
+  padding: 15px;
+  text-align: left;
+  font-family: Verdana, sans-serif;
+  font-size: 11px; color: #666;
+}
+
+div.api h5 {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #333;
+  font-size: 14px;
+  margin: 10px 0 15px 0;
+}
+
+div.extrasheader {
+  margin: 70px 0 0 0;
+  padding: 10px;
+  overflow: hidden;
+  background-color: #444;
+}
+
+div.extrasheader img {
+  margin-right: 5px;
+}
+
+div.extrasheader h3 {
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+  margin: 10px 0 0 0;
+  color: #fff;
+}
+
+div.apps {
+  text-align: left;
+  width: 740px;
+  margin-bottom: 100px;
+}
+
+div.apps div.first {
+  margin-top: 0;
+}
+
+div.apps h2 {
+  font-family: Georgia, serif;
+  color: #222;
+  font-size: 21px;
+  font-weight: normal;
+  line-height: 1.3em;
+  margin: 0;
+}
+
+div.appgroup {
+  border-top: 1px solid #ccc;
+  margin: 30px 0 0 0;
+}
+
+div.appgroup h3 {
+  margin: 10px 0 0 0;
+	padding: 0;
+	font-size: 14px;
+	line-height: 1.2em;
+	color: #000;
+	text-transform: uppercase;
+}
+
+div.appgroup table {
+  margin: 30px 0 0 0;
+}
+
+div.appgroup td {
+  padding:0;
+  text-align: left;
+}
+
+div.appgroup td.description {
+  padding: 5px 15px 30px 0;
+  font-family: Verdana, sans-serif;
+  font-size: 11px;
+}
+
+div.appgroup td.iphone {
+  padding: 0 20px 10px 10px;
+  font-family: Verdana, sans-serif;
+  font-size: 11px;
+	height: 100px;
+}
+
+div.appgroup h4 {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 5px 0;
+	padding: 0;
+	font-size: 14px;
+	line-height: 1.2em;
+}
+
+div.appgroup img {
+  border: 1px solid #ccc;
+	padding: 1px;
+}
+
+div.appgroup img.iphone {
+  border: 0;
+	padding: 0;
+}
+
+/* WEBBASED --------------------------------------------------------*/
+
+body.webbased div.half p {
+  margin: 10px 0 30px 0;
+}
+
+body.webbased div.column {
+  float: left;
+}
+
+body.webbased div.end {
+  margin-left: 40px;
+}
+
+body.webbased h2.top {
+  margin-top: 20px;
+  color: #222;
+}
+
+body.webbased div.column img {
+  margin: 25px;
+}
+
+body.webbased div.logos {
+	border-left: 1px solid #ccc;
+	padding: 10px;
+	width: 450px;
+}
+
+body.webbased div.logos img {
+	margin: 25px 20px 25px 20px;
+}
+
+/* SECURITY --------------------------------------------------------*/
+
+body.security div.column ul {
+	font-family: georgia;
+}
+
+body.security div.column li {
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+
+body.security div.column {
+	width: 600px;
+}
+
+/* ABOUT -----------------------------------------------------------*/
+
+body.about div.buzz {
+  margin-top: 15px;
+}
+
+body.about div.half p {
+  margin: 10px 0 30px 0;
+}
+
+body.about div.column {
+  float: left;
+}
+
+body.about div.end {
+  margin-left: 40px;
+}
+
+body.about img.profile {
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+body.about h2.bio {
+  margin-bottom: 20px;
+}
+
+body.about div.column h3 {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+body.about div.half ul {
+	font-family: georgia;
+	padding-left: 17px;
+}
+
+body.about div.half li {
+	font-size: 16px;
+	margin-bottom: 10px;
+	line-height: 1.3em;
+}
+
+table.pr td {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+table.pr td h3 {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+table.pr td a.product {
+  color: #222;
+  border-bottom: 2px solid #ccc;
+  text-decoration: none;
+}
+
+table.pr td a.product:hover {
+  border-bottom: 2px solid #3671a1;
+}
+
+body.about sup {
+  color: #ccc;
+  font-size: 11px;
+}
+
+body.about div.email {
+  float: right;
+  overflow: hidden;
+  margin-right: 120px;
+}
+
+div.timeline {
+  background-color: #efefef;
+  width: 450px;
+  padding: 15px;
+  padding-bottom: 30px;
+  float: left;
+}
+
+div.timeline h5 {
+  color: #222;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  margin: 0;
+  margin-top: 10px;
+  line-height: 1.3em;
+}
+
+div.timelinecontents {
+  background-image: url(/images/bkgd_timeline.png);
+  margin: 30px 0 15px 0;
+  font-family: lucida grande, sans-serif;
+  font-weight: normal;
+  font-size: 11px;
+  overflow: hidden;
+}
+
+body.about div.leftimage {
+  float: left;
+  padding: 5px;
+  text-align: center;
+  width: 145px;
+}
+
+body.about div.rightimage {
+  float: right;
+  padding: 5px;
+  text-align: center;
+  width: 145px;
+}
+
+div.timeblock {
+  border-top: 2px solid #999;
+  padding-top: 10px;
+  width: 290px;
+  line-height: normal;
+  overflow: hidden;
+}
+
+div.timeblock-right {
+  border-top: 2px solid #999;
+  width: 290px;
+  line-height: normal;
+  padding-top: 10px;
+  float: right;
+}
+
+div.threesevenevent {
+  border-top: 2px solid #cc0000;
+}
+
+div.timelinecontents div.year {
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  color: #999;
+  font-size: 24px;
+  float: left;
+  margin-left: 25px;
+}
+
+div.timeblock-right div.year {
+  margin-right: 25px;
+  margin-left: 0;
+}
+
+div.threesevenevent div.year {
+  color: #cc0000;
+}
+
+div.timelinecontents div.eventcontents {
+  width: 210px;
+  float: left;
+}
+
+/* NEW HOME (2) ----------------------------------------------------*/
+
+
+div.header {
+  margin-bottom: 20px;
+}
+
+div.header div.container {
+	margin: 0 auto;
+	padding: 10px 0;
+	text-align: left;
+	color: #999;
+}
+
+div.container {
+	width: 980px;
+	clear: both;
+	overflow: hidden;
+	text-align: left;
+}
+
+body.home2 div.top {
+  margin: 0 0 10px 0;
+  border-bottom: 0;
+}
+
+body.home2 div.app a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body.home2 div.app h5 {
+  margin: 0;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: bold;
+  font-family: Helvetica, sans-serif;
+}
+
+body.home2 div.app h5 a {
+  text-decoration: none;
+  border-bottom: 3px solid #ccc;
+}
+
+body.home2 div.app h5 a:hover {
+  border-bottom: 3px solid #66c7df;
+}
+
+body.home2 div.app h6 {
+  margin: 5px 0 0 0;
+  font-size: 18px;
+  line-height: 1.4em;
+  color: #222;
+  font-weight: normal;
+}
+
+body.home2 div.app h6 span {
+  margin: 0;
+  font-size: 12px;
+  color: #666;
+  font-weight: normal;
+}
+
+body.home2 div.basecamp {
+  background-image: url(/images/bubble-bc-bg-solo.png);
+  background-repeat: no-repeat;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+body.home2 div.basecamp h3 {
+  color: #414110;
+  margin: 0;
+  padding: 18px 15px 5px 15px;
+  font-weight: bold;
+  font-family: Helvetica, sans-serif;
+  font-size: 24px;
+  line-height: 1.0em;
+  letter-spacing: -1px;
+}
+
+body.home2 div.basecamp h4 {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+  font-size: 11px;
+  color: #414110;
+  margin: 0;
+  padding: 0 20px 0 20px;
+  text-transform: none;
+  font-weight: normal;
+}
+
+body.home2 div.highrise {
+  background-image: url(/images/bubble-hr-bg-solo.png);
+  background-repeat: no-repeat;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+body.home2 div.highrise h3 {
+  color: #024769;
+  margin: 0;
+  padding: 18px 15px 5px 15px;
+  font-weight: bold;
+  font-family: Helvetica, sans-serif;
+  font-size: 24px;
+  line-height: 1.0em;
+  letter-spacing: -1px;
+}
+
+body.home2 div.highrise h4 {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+  font-size: 11px;
+  color: #024769;
+  margin: 0;
+  padding: 0 20px 0 20px;
+  text-transform: none;
+  font-weight: normal;
+}
+
+body.home2 div.backpack {
+  background-image: url(/images/bubble-bp-bg-solo.png);
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+body.home2 div.backpack h3 {
+  color: #2c5700;
+  margin: 0;
+  padding: 18px 15px 5px 15px;
+  font-weight: bold;
+  font-family: Helvetica, sans-serif;
+  font-size: 24px;
+  line-height: 1.0em;
+  letter-spacing: -1px;
+}
+
+body.home2 div.backpack h4 {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+  font-size: 11px;
+  color: #2c5700;
+  margin: 0;
+  padding: 0 20px 0 20px;
+  text-transform: none;
+  font-weight: normal;
+}
+
+body.home2 div.campfire {
+  background-image: url(/images/bubble-cf-bg-solo.png);
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+body.home2 div.campfire h3 {
+  color: #511f1f;
+  margin: 0;
+  padding: 18px 15px 5px 15px;
+  font-weight: bold;
+  font-family: Helvetica, sans-serif;
+  font-size: 24px;
+  line-height: 1.0em;
+  letter-spacing: -1px;
+}
+
+body.home2 div.campfire h4 {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+  font-size: 11px;
+  color: #511f1f;
+  margin: 0;
+  padding: 0 20px 0 20px;
+  text-transform: none;
+  font-weight: normal;
+}
+
+body.home2 div.statement {
+  background-color: #222;
+  color: #fc3;
+  width: 400px;
+  text-align: left;
+  margin-top: 0;
+}
+
+body.home2 div.statement div.inner {
+  padding: 5px 20px 10px 20px;
+  font-size: 21px;
+  line-height: 1.2em;
+}
+
+body.home2 div.statement div.inner h1 {
+  font-size: 48px;
+  margin: 25px 0 20px 0;
+  padding: 0;
+  letter-spacing: -2px;
+  line-height: 1.0em;
+  text-align: left;
+  color: #fff;
+}
+
+body.home2 div.statement div.inner p a {
+  color: #999;
+	font-weight: normal;
+}
+
+body.home2 div.statement div.inner p {
+  background-color: #222;
+	font-size: 24px;
+  color: #dfb946;
+  text-align: left;
+  margin: 0 0 15px 0;
+	line-height: 1.2em;
+	font-family: georgia, helvetica, arial, sans-serif;
+}
+
+body.home2 div.statement div.inner p.webbased {
+  font-size: 19px;
+  margin-bottom: 0;
+  color: #DFB946;
+  font-family: Georgia, serif;
+  line-height: 1.3em;
+}
+
+body.home2 div.statement div.inner p.webbased a {
+	color: #f2be20;
+}
+
+body.home2 div.statement table {
+	margin: 0;
+}
+
+body.home2 div.statement table td {
+	font-size: 14px;
+	padding: 0 15px 0 0;
+	color: #DFB946;
+	line-height: 1.4em;
+}
+
+body.home2 div.statement table td a {
+	color: #DFB946;
+}
+
+body.home2 div.content {
+	margin: 20px;
+}
+
+body.home2 div.left {
+	width: 400px;
+	float: left;
+	overflow: hidden;
+}
+
+body.home2 div.right {
+	width: 530px;
+	float: right;
+	text-align: left;
+}
+
+body.home2 div.products {
+	width: 560px;
+	float: right;
+	text-align: left;
+	padding-top: 0;
+	margin-top: 16px;
+	margin-bottom: 30px;
+}
+
+body.home2 div.products table {
+  margin: 0;
+}
+
+body.home2 div.products div.card {
+  padding: 10px;
+  text-align: center;
+  background-image: url('/images/bkgd-card.gif');
+  width: 250px;
+}
+
+body.home2 div.products div.card h3 {
+  font-size: 24px;
+  letter-spacing: -1px;
+  line-height: 1em;
+  margin: 15px 0 5px 0;
+}
+
+body.home2 div.products div.card h3 a, body.home2 div.products div.card h4 a, body.home2 div.products div.card h6 a {
+  color: #333;
+  text-decoration: none;
+}
+
+body.home2 div.products div.card h4 {
+  font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+  font-size: 11px;
+  margin: 0 10px 10px 10px;
+  font-weight: normal;
+}
+
+body.home2 div.products div.card h5 {
+  font-family: Helvetica,sans-serif;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: bold;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+body.home2 div.products div.card h5 a {
+  text-decoration: none;
+  border-bottom: 3px solid #99ccff;
+  color: #222;
+}
+
+body.home2 div.products div.card h5 a:hover {
+  border-bottom: 3px solid #3671a1;
+}
+
+body.home2 div.products div.card h5 sup {
+  color: #ccc;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+body.home2 div.products div.card h6 {
+  font-size: 18px;
+  margin: 10px 0 15px 0;
+  font-weight: normal;
+}
+
+body.home2 div.products div.cardcap-top {
+  margin-left: -10px;
+  margin-top: -10px;
+}
+
+body.home2 div.products div.cardcap-bottom {
+  margin-left: -10px;
+  margin-bottom: -10px;
+}
+
+body.home2 div.right h1 {
+	margin: 0 0 30px 0;
+	padding: 0;
+	font-size: 22px;
+	font-weight: normal;
+	line-height: 1.2em;
+	color: #222;
+	font-family: georgia, times;
+	text-align: left;
+	letter-spacing: normal;
+}
+
+body.home2 div.right div.highlights {
+	margin-bottom: 30px;
+	overflow: hidden;
+}
+
+body.home2 div.right div.highlights div.highlight {
+	margin-right: 14px;
+	float: left;
+	font-size: 14px;
+	font-weight: bold;
+	color: #444;
+}
+
+body.home2 div.right div.highlights div.highlight img {
+	margin-bottom: 5px;
+}
+
+body.home2 div.highlight img.plus_zoom {
+	position: absolute;
+	display: none;
+}
+
+body.home2 div.logos div.right h2, div.action h2 {
+	margin: 0;
+	padding: 0;
+	font-size: 22px;
+	font-weight: normal;
+	line-height: 1.2em;
+	color: #222;
+	font-family: georgia, times;
+}
+
+body.home2 div.logos {
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+
+body.home2 div.action cite {
+	color: #666;
+	font-size: 16px;
+}
+
+body.home2 div.action h3 {
+	font-size: 16px;
+	font-family: georgia, times;
+	font-weight: normal;
+	margin: 5px 0 0 0;
+	padding: 0;
+}
+
+body.home2 div.blogs ul.extra_extra_news {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+}
+
+body.home2 div.blogs li {
+	margin: 12px;
+}
+
+body.home2 div.blogs li strong, body.home2 div.blogs li em {
+	font-style: italic;
+	color: #111;
+	font-weight: bold;
+}
+
+body.home2 div.blogs li a {
+	color: #555;
+}
+
+
+body.home2 div.blogs p {
+  font-style: italic;
+  font-size: 14px;
+}
+
+body.home2 div.productblogbottom {
+  font-size: 11px;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+  padding: 15px 10px 5px 0;
+  background-image: url(/images/bkgd_productblog-bottom.png);
+  background-repeat: no-repeat;
+  width: 250px;
+  background-color: #fff;
+}
+
+body.home2 div.svnbottom {
+  font-size: 11px;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+  padding: 15px 20px 5px 0;
+  background-image: url(/images/bkgd_svn-bottom.png);
+  background-repeat: no-repeat;
+  width: 250px;
+  text-align: right;
+  background-color: #fff;
+}
+
+
+body.home2 div.blurb h2, div.blogs h2, div.buzz h4 {
+	margin: 0 0 2px 0;
+	padding: 0;
+	font-size: 14px;
+	line-height: 1.2em;
+	color: #3671A1;
+	text-transform: uppercase;
+	font-family: Helvetica, sans-serif;
+}
+
+body.home2 div.blurb, div.blogs {
+	width: 255px;
+	margin: 0 20px 30px 0;
+	float: left;
+}
+
+body.home2 div.blurb p, div.blogs p {
+	font-family: Georgia, serif;
+	font-size: 16px;
+	line-height: 1.3em;
+	margin: 0 0 30px 0;
+}
+
+body.home2 div.blurb ul, div.blogs ul {
+	list-style: none;
+	margin: 3px 0 0 0;
+	padding: 0;
+	font-family: Georgia, serif;
+}
+
+body.home2 div.blurb li, div.blogs li {
+	font-size: 14px;
+	margin-bottom: 25px;
+	color: #555;
+}
+
+body.home2 div.blurb li strong, body.home2 div.blurb li em {
+	font-style: italic;
+	color: #111;
+	font-weight: bold;
+}
+
+body.home2 div.blurb li a {
+	color: #555;
+}
+
+body.home2 div.extras {
+	width: 100%;
+	text-align: left;
+	font-weight: normal;
+	margin-bottom: 5px;
+}
+
+
+body.home2 div.buzz {
+  margin: 5px 0 0 0;
+  background-image: url(/images/bkgd_buzz_home.png);
+  background-repeat: no-repeat;
+  padding: 15px;
+  padding-top: 30px;
+}
+
+body.home2 div.buzz h2 {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+body.home2 div.icon_block {
+	height: 350px;
+	text-align: center;
+}
+
+body.home2 div.icon_block img {
+	margin-bottom: 18px;
+	border: 1px solid #dcdcdc;
+}
+
+body.home2 div.action {
+	width: 100%;
+	margin: 0 0 30px 0;
+	padding: 20px 0;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	float: left;
+	text-align: center;
+	font-size: 24px;
+	font-weight: bold;
+	background-color: #fff;
+}
+
+body.home2 div.action img.button {
+	margin-bottom: 10px;
+}
+
+body.home2 div.casestudies h2 {
+  margin: 0 0 10px 0;
+	padding: 0;
+	font-size: 14px;
+	line-height: 1.2em;
+	color: #3671A1;
+	text-transform: uppercase;
+	text-align: left;
+}
+
+body.home2 div.casestudy {
+	width: 190px;
+	margin: 0 20px 20px 0;
+	background-color: #ccc;
+	float: left;
+	text-align: left;
+}
+
+body.home2 div.casestudy div.who {
+	background-color: #222;
+	padding: 5px;
+}
+
+body.home2 div.casestudy div.who h3, div.casestudy div.who h4 {
+	margin: 0;
+	padding: 2px 0 0 0;
+	color: #fff;
+	line-height: 1em;
+}
+
+body.home2 div.casestudy div.who h3 {
+	font-size: 14px;
+}
+
+body.home2 div.casestudy div.who h4 {
+	font-size: 12px;
+	font-weight: normal;
+	color: #E8ECDC;
+	font-style: normal;
+	font-family: Helvetica, sans-serif;
+}
+
+body.home2 div.casestudy div.what {
+	font-size: 14px;
+	text-align: left;
+	padding: 5px 0 0 5px;
+	font-family: Georgia, serif;
+	font-style: italic;
+	background-color: #fff;
+	line-height: 1.1em;
+}
+
+body.home2 div.casestudies div.casestudy img.play {
+	position: absolute;
+}
+
+body.home2 div.end {
+	margin-right: 0;
+}
+
+body.home2 div.more div.end {
+	margin-left: 60px;
+	width: 480px;
+}
+
+body.home2 div.press {
+	margin-top: 25px;
+	background-image: url(/images/bkgd_press_home.png);
+	background-repeat: no-repeat;
+	padding: 20px 0;
+	text-align: center;
+}
+
+body.home2 div.press h2 {
+	margin: 0 0 5px 0;
+	font-size: 18px;
+}
+
+body.home2 div.press img {
+	margin: 0;
+}
+
+body.home2 div.more {
+  text-align: left;
+  width: 980px;
+  margin-bottom: 30px;
+}
+
+body.home2 div.half {
+  width: 420px;
+  text-align: left;
+  padding: 0 20px 0 0;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-family: Georgia, serif;
+  font-size: 14px;
+  line-height: 1.3em;
+  float: left;
+}
+
+body.home2 div.otherwares {
+  margin: 15px 0 10px 0;
+  background-image: url(/images/bkgd_buzz_home.png);
+  background-repeat: no-repeat;
+}
+
+body.home2 div.book {
+  margin-top: 0;
+  text-align: left;
+  padding: 20px;
+  font-size: 14px;
+  line-height: 1.3em;
+  overflow: hidden;
+}
+
+body.home2 div.book h2 {
+  font-family: Georgia, serif;
+  font-size: 21px;
+  line-height: 1.1em;
+  margin: 0 0 30px 0;
+  color: #222;
+  font-weight: normal;
+}
+
+body.home2 div.half h2 {
+  font-family: Georgia, serif;
+  font-size: 21px;
+  line-height: 1.1em;
+  margin: 10px 0;
+  color: #222;
+  font-weight: normal;
+}
+
+div.divider {
+  clear: both;
+  margin: 25px 0;
+  border-top: 1px solid #ccc;
+}
+
+/* KEYNOTES ------------------------------------------------------*/
+
+body.keynotes div.vidcontent {
+  float: left;
+  width: 720px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+body.keynotes div.keynotes h1 {
+  text-align: left;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+body.keynotes div.vidcontainer {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #999;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+body.keynotes div.video {
+  float: left;
+  overflow: hidden;
+}
+
+body.keynotes div.video object {
+  margin-bottom: 15px;
+}
+
+body.keynotes div.viddata {
+  float: left;
+  margin-left: 20px;
+  overflow: hidden;
+  width: 220px;
+}
+
+body.keynotes div.tag {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  padding: 5px;
+  color: #fff;
+  margin: 5px;
+  float: left;
+}
+
+body.keynotes div.business {
+  background-color: #669933;
+}
+
+body.keynotes div.design {
+  background-color: #4a97c8;
+}
+
+body.keynotes div.programming {
+  background-color: #ba2a2a;
+}
+
+body.keynotes div.general {
+  background-color: #222;
+}
+
+body.keynotes div.vidcontainer table {
+  margin-top: 25px;
+  margin-left: 5px;
+}
+
+body.keynotes div.vidcontainer table td.label {
+  padding: 5px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+body.keynotes div.vidcontainer table td.value {
+  padding: 5px 0 5px 10px;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+}
+
+body.keynotes div.vidcontainer table td.last {
+  border-bottom: none;
+}
+
+body.keynotes div.viddescription {
+  width: 720px;
+  overflow: hidden;
+}
+
+body.keynotes div.viddescription h2 {
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+
+body.keynotes div.viddescription h2 a {
+  color: #222;
+  text-decoration: none;
+}
+
+body.keynotes div.viddescription p {
+  font-family: Helvetica, sans-serif;
+  margin-top: 0;
+}
+
+body.keynotes div.sidebarcontainer {
+  float: left;
+  margin-left: 30px;
+  width: 230px;
+  overflow: hidden;
+}
+
+body.keynotes div.bubble {
+  background-color: #ff6500;
+}
+
+body.keynotes div.cap {
+  margin: 0;
+}
+
+body.keynotes div.bubblecontent {
+  padding: 5px 15px;
+  color: #fff;
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+body.keynotes div.bubblecontent a {
+  color: #fff;
+}
+
+body.keynotes div.sidebar {
+  background-color: #efefef;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  overflow: hidden;
+}
+
+body.keynotes div.audio {
+  padding: 15px;
+  padding-bottom: 0;
+}
+
+body.keynotes div.audio p {
+  font-size: 14px;
+  font-family: Helvetica, sans-serif;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+}
+
+body.keynotes div.audio h3 {
+  margin-top: 0;
+}
+
+body.keynotes div.audio ul {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+body.keynotes div.audio li {
+  margin-left: 0;
+  background-image: url(/images/icon_speaker.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  padding-left: 23px;
+  padding-bottom: 15px;
+  line-height: 1.3em;
+  color: #888;
+}
+
+body.keynotes div.audio a {
+  color: #444;
+}
+
+body.keynotes div.audio a:hover {
+  color: #222;
+}
+
+/* OFFICE HOURS ------------------------------------------------------*/
+
+body.home2 div.officehours div.header {
+	background-color: #111;
+	margin-bottom: 0;
+}
+
+body.home2 div.officehours div.header a, body.home2 div.officehours div.header a:visited {
+	color: #ccc;
+}
+
+
+body.officehours div.pagetitle h1 span {
+	color: #999;
+	font-weight: normal;
+}
+
+body.officehours div.pagetitle h3 {
+	font-size: 16px;
+	margin-top: -18px;
+	color: #999;
+}
+
+/* ACCOUNTS ----------------------------------------------------------*/
+
+body.account {
+  background-color: #f5f6f7;
+}
+
+body.account div.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+body.account div.wrapper div.container div.card {
+  width: 960px;
+  margin: 10px 0 35px 0;
+  overflow: hidden;
+  float: left;
+  background-color: #fff;
+}
+
+body.account div.stamp {
+  position: absolute;
+  padding: 0;
+  padding-left: 420px;
+  padding-top: 30px;
+  overflow: visible;
+}
+
+body.account div.wrapper div.container div.card div.cardcap {
+  width: 960px;
+  height: 10px;
+  margin: 0;
+  background-color: #f5f6f7;
+}
+
+body.account div.wrapper div.container div.card div.cardcontent {
+  background-image: url('images/card-bkgd-perma.png');
+  padding: 0;
+  padding-bottom: 20px;
+  text-align: left;
+  overflow: hidden;
+}
+
+body.account div.wrapper div.container div.card div.cardcontent h1 {
+  text-align: left;
+  font-size: 48px;
+  letter-spacing: -2px;
+  line-height: 0.95em;
+  margin-top: 60px;
+  margin-left: 30px;
+}
+
+body.account div.wrapper div.container div.card div.cardcontent h3 {
+  font-weight: normal;
+  font-size: 21px;
+  color: #777;
+  line-height: 1.2em;
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+body.account div.wrapper div.container div.card div.cardcontent div.tour-left {
+  overflow: hidden;
+  padding: 20px;
+  padding-left: 5px;
+  padding-top: 0;
+  text-align: left;
+}
+
+body.account div.wrapper div.container div.card div.cardcontent div.tour-left h2 {
+  border-top: 1px solid #ccc;
+  font-size: 26px;
+  margin-left: 15px;
+  padding-left: 375px;
+  padding-top: 30px;
+  padding-right: 20px;
+  margin-top: 0;
+	margin-bottom: 10px;
+  text-align: left;
+}
+
+body.account div.wrapper div.container div.card div.cardcontent div.tour-right {
+  overflow: hidden;
+  padding: 20px;
+  padding-right: 5px;
+  padding-top: 0;
+  text-align: left;
+}
+
+body.account div.wrapper div.container div.card div.cardcontent div.tour-right h2 {
+  border-top: 1px solid #ccc;
+  font-size: 26px;
+  margin-left: 0;
+  margin-right: 15px;
+	margin-bottom: 10px;
+  padding-left: 30px;
+  padding-top: 30px;
+  padding-right: 20px;
+  margin-top: 0;
+  text-align: left;
+}
+
+body.account h4 {
+  margin: 0;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+body.account div.wrapper div.container div.card div.cardcontent div.tour-copy {
+  width: 520px;
+  float: left;
+  margin-left: 30px;
+}
+
+body.account div.wrapper div.container div.card div.cardcontent div.tour-copy p {
+  font-size: 14px;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;
+  margin-top: 0;
+  line-height: 20px;
+}
+
+body.account div.wrapper div.container div.card div.cardcontent div.tour-copy ul {
+  list-style-image:url(/images/icon_check.png);
+  margin-left: -15px;
+  margin-top: 25px;
+}
+
+body.account div.wrapper div.container div.card div.cardcontent div.tour-copy li {
+  margin: 5px 0;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+body.account div.faq {
+  border-top: 1px solid #ccc;
+  margin: 20px;
+  padding: 20px;
+}
+
+body.account div.faq h4 {
+  margin-top: 30px;
+}
+
+body.account div.faq h5 {
+  font-size: 26px;
+  margin: 20px 0 30px 0;
+  text-align: left;
+}
+
+body.account div.faq p {
+  font-size: 14px;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;
+  margin-top: 0;
+  line-height: 1.5em;
+	width: 75%;
+}
