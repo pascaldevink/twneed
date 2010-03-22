@@ -849,14 +849,14 @@ body.support_form div.support_success {
 
 div#footer {
 	border-top: 1px solid #000;
-  background-color: #111;
+  background-color: #3671A1;
 	padding-top: 20px;
 	color: #ccc;
 	clear: both;
 }
 
 div#footer div.container {
-	background-color: #111;
+	background-color: #3671A1;
 }
 
 div#footer div.container div#products {
@@ -926,7 +926,7 @@ div#footer div.legal {
 	text-align: center;
 	font-size: 10px;
 	width: 800px;
-	background-color: #111;
+	background-color: #3671A1;
 	line-height: 1.4em;
 }
 

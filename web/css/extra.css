@@ -1409,6 +1409,10 @@ body.home2 div.blurb li a {
 	color: #555;
 }
 
+body.home2 div.blurb li a.reply {
+        color: #3671A1;
+}
+
 body.home2 div.extras {
 	width: 100%;
 	text-align: left;

@@ -2,7 +2,7 @@
      <div style="margin: 15px 0pt; width: 370px;" class="half">
 
         <div class="blurb extras buzz">
-            <h4 style="margin-bottom: 10px;">Buzz from around the web</h4>
+            <h4 style="margin-bottom: 10px;">Last requested needs</h4>
             <div count="8" class="extra_extra_news">
                 <ul id="needslist">
                     <?php include_partial('homepage/needlist', array('needs' => $needs)) ?>
