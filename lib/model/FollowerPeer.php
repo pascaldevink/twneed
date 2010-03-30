@@ -29,7 +29,10 @@ class FollowerPeer extends BaseFollowerPeer
         if (is_null($follower))
         {
             $t = new Twitter(sfConfig::get('twitter_username'), sfConfig::get('twitter_password'));
-            $t->createFriendship($rawfollower['id']);
+            if (!$t->existsFriendship(sfConfig::get('twitter_user_id'), $rawfollower['id']))
+            {
+                $t->createFriendship($rawfollower['id']);
+            }
 
             $follower = new Follower();
             $follower->setFollowing(true);

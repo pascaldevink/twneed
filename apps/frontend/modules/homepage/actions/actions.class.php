@@ -18,6 +18,9 @@ class homepageActions extends sfActions
     public function executeIndex(sfWebRequest $request)
     {
         $this->needs = NeedPeer::retrieveLatestNeeds();
+        $this->number_of_needs = count($this->needs);
+        $quote = NumberQuotes::getQuote($this->number_of_needs);
+        $this->quote = $quote;
     }
 
     public function executeUpdate(sfWebRequest $request)

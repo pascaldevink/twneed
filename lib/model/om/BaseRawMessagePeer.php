@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Base static class for performing query and update operations on the 'raw_dm' table.
+ * Base static class for performing query and update operations on the 'raw_message' table.
  *
  * 
  *
@@ -11,22 +11,22 @@
  *
  * @package    lib.model.om
  */
-abstract class BaseRawDmPeer {
+abstract class BaseRawMessagePeer {
 
 	/** the default database name for this class */
 	const DATABASE_NAME = 'propel';
 
 	/** the table name for this class */
-	const TABLE_NAME = 'raw_dm';
+	const TABLE_NAME = 'raw_message';
 
 	/** the related Propel class for this table */
-	const OM_CLASS = 'RawDm';
+	const OM_CLASS = 'RawMessage';
 
 	/** A class that can be returned by this peer. */
-	const CLASS_DEFAULT = 'lib.model.RawDm';
+	const CLASS_DEFAULT = 'lib.model.RawMessage';
 
 	/** the related TableMap class for this table */
-	const TM_CLASS = 'RawDmTableMap';
+	const TM_CLASS = 'RawMessageTableMap';
 	
 	/** The total number of columns. */
 	const NUM_COLUMNS = 5;
@@ -35,25 +35,25 @@ abstract class BaseRawDmPeer {
 	const NUM_LAZY_LOAD_COLUMNS = 0;
 
 	/** the column name for the ID field */
-	const ID = 'raw_dm.ID';
+	const ID = 'raw_message.ID';
 
-	/** the column name for the DM_ID field */
-	const DM_ID = 'raw_dm.DM_ID';
+	/** the column name for the MESSAGE_ID field */
+	const MESSAGE_ID = 'raw_message.MESSAGE_ID';
 
 	/** the column name for the CREATED_AT field */
-	const CREATED_AT = 'raw_dm.CREATED_AT';
+	const CREATED_AT = 'raw_message.CREATED_AT';
 
 	/** the column name for the TEXT field */
-	const TEXT = 'raw_dm.TEXT';
+	const TEXT = 'raw_message.TEXT';
 
 	/** the column name for the FOLLOWER_ID field */
-	const FOLLOWER_ID = 'raw_dm.FOLLOWER_ID';
+	const FOLLOWER_ID = 'raw_message.FOLLOWER_ID';
 
 	/**
-	 * An identiy map to hold any loaded instances of RawDm objects.
+	 * An identiy map to hold any loaded instances of RawMessage objects.
 	 * This must be public so that other peer classes can access this when hydrating from JOIN
 	 * queries.
-	 * @var        array RawDm[]
+	 * @var        array RawMessage[]
 	 */
 	public static $instances = array();
 
@@ -72,10 +72,10 @@ abstract class BaseRawDmPeer {
 	 * e.g. self::$fieldNames[self::TYPE_PHPNAME][0] = 'Id'
 	 */
 	private static $fieldNames = array (
-		BasePeer::TYPE_PHPNAME => array ('Id', 'DmId', 'CreatedAt', 'Text', 'FollowerId', ),
-		BasePeer::TYPE_STUDLYPHPNAME => array ('id', 'dmId', 'createdAt', 'text', 'followerId', ),
-		BasePeer::TYPE_COLNAME => array (self::ID, self::DM_ID, self::CREATED_AT, self::TEXT, self::FOLLOWER_ID, ),
-		BasePeer::TYPE_FIELDNAME => array ('id', 'dm_id', 'created_at', 'text', 'follower_id', ),
+		BasePeer::TYPE_PHPNAME => array ('Id', 'MessageId', 'CreatedAt', 'Text', 'FollowerId', ),
+		BasePeer::TYPE_STUDLYPHPNAME => array ('id', 'messageId', 'createdAt', 'text', 'followerId', ),
+		BasePeer::TYPE_COLNAME => array (self::ID, self::MESSAGE_ID, self::CREATED_AT, self::TEXT, self::FOLLOWER_ID, ),
+		BasePeer::TYPE_FIELDNAME => array ('id', 'message_id', 'created_at', 'text', 'follower_id', ),
 		BasePeer::TYPE_NUM => array (0, 1, 2, 3, 4, )
 	);
 
@@ -86,10 +86,10 @@ abstract class BaseRawDmPeer {
 	 * e.g. self::$fieldNames[BasePeer::TYPE_PHPNAME]['Id'] = 0
 	 */
 	private static $fieldKeys = array (
-		BasePeer::TYPE_PHPNAME => array ('Id' => 0, 'DmId' => 1, 'CreatedAt' => 2, 'Text' => 3, 'FollowerId' => 4, ),
-		BasePeer::TYPE_STUDLYPHPNAME => array ('id' => 0, 'dmId' => 1, 'createdAt' => 2, 'text' => 3, 'followerId' => 4, ),
-		BasePeer::TYPE_COLNAME => array (self::ID => 0, self::DM_ID => 1, self::CREATED_AT => 2, self::TEXT => 3, self::FOLLOWER_ID => 4, ),
-		BasePeer::TYPE_FIELDNAME => array ('id' => 0, 'dm_id' => 1, 'created_at' => 2, 'text' => 3, 'follower_id' => 4, ),
+		BasePeer::TYPE_PHPNAME => array ('Id' => 0, 'MessageId' => 1, 'CreatedAt' => 2, 'Text' => 3, 'FollowerId' => 4, ),
+		BasePeer::TYPE_STUDLYPHPNAME => array ('id' => 0, 'messageId' => 1, 'createdAt' => 2, 'text' => 3, 'followerId' => 4, ),
+		BasePeer::TYPE_COLNAME => array (self::ID => 0, self::MESSAGE_ID => 1, self::CREATED_AT => 2, self::TEXT => 3, self::FOLLOWER_ID => 4, ),
+		BasePeer::TYPE_FIELDNAME => array ('id' => 0, 'message_id' => 1, 'created_at' => 2, 'text' => 3, 'follower_id' => 4, ),
 		BasePeer::TYPE_NUM => array (0, 1, 2, 3, 4, )
 	);
 
@@ -139,12 +139,12 @@ abstract class BaseRawDmPeer {
 	 *		$c->addJoin(TablePeer::alias("alias1", TablePeer::PRIMARY_KEY_COLUMN), TablePeer::PRIMARY_KEY_COLUMN);
 	 * </code>
 	 * @param      string $alias The alias for the current table.
-	 * @param      string $column The column name for current table. (i.e. RawDmPeer::COLUMN_NAME).
+	 * @param      string $column The column name for current table. (i.e. RawMessagePeer::COLUMN_NAME).
 	 * @return     string
 	 */
 	public static function alias($alias, $column)
 	{
-		return str_replace(RawDmPeer::TABLE_NAME.'.', $alias.'.', $column);
+		return str_replace(RawMessagePeer::TABLE_NAME.'.', $alias.'.', $column);
 	}
 
 	/**
@@ -160,11 +160,11 @@ abstract class BaseRawDmPeer {
 	 */
 	public static function addSelectColumns(Criteria $criteria)
 	{
-		$criteria->addSelectColumn(RawDmPeer::ID);
-		$criteria->addSelectColumn(RawDmPeer::DM_ID);
-		$criteria->addSelectColumn(RawDmPeer::CREATED_AT);
-		$criteria->addSelectColumn(RawDmPeer::TEXT);
-		$criteria->addSelectColumn(RawDmPeer::FOLLOWER_ID);
+		$criteria->addSelectColumn(RawMessagePeer::ID);
+		$criteria->addSelectColumn(RawMessagePeer::MESSAGE_ID);
+		$criteria->addSelectColumn(RawMessagePeer::CREATED_AT);
+		$criteria->addSelectColumn(RawMessagePeer::TEXT);
+		$criteria->addSelectColumn(RawMessagePeer::FOLLOWER_ID);
 	}
 
 	/**
@@ -183,26 +183,26 @@ abstract class BaseRawDmPeer {
 		// We need to set the primary table name, since in the case that there are no WHERE columns
 		// it will be impossible for the BasePeer::createSelectSql() method to determine which
 		// tables go into the FROM clause.
-		$criteria->setPrimaryTableName(RawDmPeer::TABLE_NAME);
+		$criteria->setPrimaryTableName(RawMessagePeer::TABLE_NAME);
 
 		if ($distinct && !in_array(Criteria::DISTINCT, $criteria->getSelectModifiers())) {
 			$criteria->setDistinct();
 		}
 
 		if (!$criteria->hasSelectClause()) {
-			RawDmPeer::addSelectColumns($criteria);
+			RawMessagePeer::addSelectColumns($criteria);
 		}
 
 		$criteria->clearOrderByColumns(); // ORDER BY won't ever affect the count
 		$criteria->setDbName(self::DATABASE_NAME); // Set the correct dbName
 
 		if ($con === null) {
-			$con = Propel::getConnection(RawDmPeer::DATABASE_NAME, Propel::CONNECTION_READ);
+			$con = Propel::getConnection(RawMessagePeer::DATABASE_NAME, Propel::CONNECTION_READ);
 		}
 		// symfony_behaviors behavior
 		foreach (sfMixer::getCallables(self::getMixerPreSelectHook(__FUNCTION__)) as $sf_hook)
 		{
-		  call_user_func($sf_hook, 'BaseRawDmPeer', $criteria, $con);
+		  call_user_func($sf_hook, 'BaseRawMessagePeer', $criteria, $con);
 		}
 
 		// BasePeer returns a PDOStatement
@@ -221,7 +221,7 @@ abstract class BaseRawDmPeer {
 	 *
 	 * @param      Criteria $criteria object used to create the SELECT statement.
 	 * @param      PropelPDO $con
-	 * @return     RawDm
+	 * @return     RawMessage
 	 * @throws     PropelException Any exceptions caught during processing will be
 	 *		 rethrown wrapped into a PropelException.
 	 */
@@ -229,7 +229,7 @@ abstract class BaseRawDmPeer {
 	{
 		$critcopy = clone $criteria;
 		$critcopy->setLimit(1);
-		$objects = RawDmPeer::doSelect($critcopy, $con);
+		$objects = RawMessagePeer::doSelect($critcopy, $con);
 		if ($objects) {
 			return $objects[0];
 		}
@@ -246,7 +246,7 @@ abstract class BaseRawDmPeer {
 	 */
 	public static function doSelect(Criteria $criteria, PropelPDO $con = null)
 	{
-		return RawDmPeer::populateObjects(RawDmPeer::doSelectStmt($criteria, $con));
+		return RawMessagePeer::populateObjects(RawMessagePeer::doSelectStmt($criteria, $con));
 	}
 	/**
 	 * Prepares the Criteria object and uses the parent doSelect() method to execute a PDOStatement.
@@ -264,12 +264,12 @@ abstract class BaseRawDmPeer {
 	public static function doSelectStmt(Criteria $criteria, PropelPDO $con = null)
 	{
 		if ($con === null) {
-			$con = Propel::getConnection(RawDmPeer::DATABASE_NAME, Propel::CONNECTION_READ);
+			$con = Propel::getConnection(RawMessagePeer::DATABASE_NAME, Propel::CONNECTION_READ);
 		}
 
 		if (!$criteria->hasSelectClause()) {
 			$criteria = clone $criteria;
-			RawDmPeer::addSelectColumns($criteria);
+			RawMessagePeer::addSelectColumns($criteria);
 		}
 
 		// Set the correct dbName
@@ -287,10 +287,10 @@ abstract class BaseRawDmPeer {
 	 * to the cache in order to ensure that the same objects are always returned by doSelect*()
 	 * and retrieveByPK*() calls.
 	 *
-	 * @param      RawDm $value A RawDm object.
+	 * @param      RawMessage $value A RawMessage object.
 	 * @param      string $key (optional) key to use for instance map (for performance boost if key was already calculated externally).
 	 */
-	public static function addInstanceToPool(RawDm $obj, $key = null)
+	public static function addInstanceToPool(RawMessage $obj, $key = null)
 	{
 		if (Propel::isInstancePoolingEnabled()) {
 			if ($key === null) {
@@ -308,18 +308,18 @@ abstract class BaseRawDmPeer {
 	 * methods in your stub classes -- you may need to explicitly remove objects
 	 * from the cache in order to prevent returning objects that no longer exist.
 	 *
-	 * @param      mixed $value A RawDm object or a primary key value.
+	 * @param      mixed $value A RawMessage object or a primary key value.
 	 */
 	public static function removeInstanceFromPool($value)
 	{
 		if (Propel::isInstancePoolingEnabled() && $value !== null) {
-			if (is_object($value) && $value instanceof RawDm) {
+			if (is_object($value) && $value instanceof RawMessage) {
 				$key = (string) $value->getId();
 			} elseif (is_scalar($value)) {
 				// assume we've been passed a primary key
 				$key = (string) $value;
 			} else {
-				$e = new PropelException("Invalid value passed to removeInstanceFromPool().  Expected primary key or RawDm object; got " . (is_object($value) ? get_class($value) . ' object.' : var_export($value,true)));
+				$e = new PropelException("Invalid value passed to removeInstanceFromPool().  Expected primary key or RawMessage object; got " . (is_object($value) ? get_class($value) . ' object.' : var_export($value,true)));
 				throw $e;
 			}
 
@@ -334,7 +334,7 @@ abstract class BaseRawDmPeer {
 	 * a multi-column primary key, a serialize()d version of the primary key will be returned.
 	 *
 	 * @param      string $key The key (@see getPrimaryKeyHash()) for this instance.
-	 * @return     RawDm Found object or NULL if 1) no instance exists for specified key or 2) instance pooling has been disabled.
+	 * @return     RawMessage Found object or NULL if 1) no instance exists for specified key or 2) instance pooling has been disabled.
 	 * @see        getPrimaryKeyHash()
 	 */
 	public static function getInstanceFromPool($key)
@@ -358,7 +358,7 @@ abstract class BaseRawDmPeer {
 	}
 	
 	/**
-	 * Method to invalidate the instance pool of all tables related to raw_dm
+	 * Method to invalidate the instance pool of all tables related to raw_message
 	 * by a foreign key with ON DELETE CASCADE
 	 */
 	public static function clearRelatedInstancePool()
@@ -396,11 +396,11 @@ abstract class BaseRawDmPeer {
 		$results = array();
 	
 		// set the class once to avoid overhead in the loop
-		$cls = RawDmPeer::getOMClass(false);
+		$cls = RawMessagePeer::getOMClass(false);
 		// populate the object(s)
 		while ($row = $stmt->fetch(PDO::FETCH_NUM)) {
-			$key = RawDmPeer::getPrimaryKeyHashFromRow($row, 0);
-			if (null !== ($obj = RawDmPeer::getInstanceFromPool($key))) {
+			$key = RawMessagePeer::getPrimaryKeyHashFromRow($row, 0);
+			if (null !== ($obj = RawMessagePeer::getInstanceFromPool($key))) {
 				// We no longer rehydrate the object, since this can cause data loss.
 				// See http://propel.phpdb.org/trac/ticket/509
 				// $obj->hydrate($row, 0, true); // rehydrate
@@ -409,7 +409,7 @@ abstract class BaseRawDmPeer {
 				$obj = new $cls();
 				$obj->hydrate($row);
 				$results[] = $obj;
-				RawDmPeer::addInstanceToPool($obj, $key);
+				RawMessagePeer::addInstanceToPool($obj, $key);
 			} // if key exists
 		}
 		$stmt->closeCursor();
@@ -433,14 +433,14 @@ abstract class BaseRawDmPeer {
 		// We need to set the primary table name, since in the case that there are no WHERE columns
 		// it will be impossible for the BasePeer::createSelectSql() method to determine which
 		// tables go into the FROM clause.
-		$criteria->setPrimaryTableName(RawDmPeer::TABLE_NAME);
+		$criteria->setPrimaryTableName(RawMessagePeer::TABLE_NAME);
 
 		if ($distinct && !in_array(Criteria::DISTINCT, $criteria->getSelectModifiers())) {
 			$criteria->setDistinct();
 		}
 
 		if (!$criteria->hasSelectClause()) {
-			RawDmPeer::addSelectColumns($criteria);
+			RawMessagePeer::addSelectColumns($criteria);
 		}
 		
 		$criteria->clearOrderByColumns(); // ORDER BY won't ever affect the count
@@ -449,15 +449,15 @@ abstract class BaseRawDmPeer {
 		$criteria->setDbName(self::DATABASE_NAME);
 
 		if ($con === null) {
-			$con = Propel::getConnection(RawDmPeer::DATABASE_NAME, Propel::CONNECTION_READ);
+			$con = Propel::getConnection(RawMessagePeer::DATABASE_NAME, Propel::CONNECTION_READ);
 		}
 
-		$criteria->addJoin(RawDmPeer::FOLLOWER_ID, FollowerPeer::ID, $join_behavior);
+		$criteria->addJoin(RawMessagePeer::FOLLOWER_ID, FollowerPeer::ID, $join_behavior);
 
 		// symfony_behaviors behavior
 		foreach (sfMixer::getCallables(self::getMixerPreSelectHook(__FUNCTION__)) as $sf_hook)
 		{
-		  call_user_func($sf_hook, 'BaseRawDmPeer', $criteria, $con);
+		  call_user_func($sf_hook, 'BaseRawMessagePeer', $criteria, $con);
 		}
 
 		$stmt = BasePeer::doCount($criteria, $con);
@@ -473,11 +473,11 @@ abstract class BaseRawDmPeer {
 
 
 	/**
-	 * Selects a collection of RawDm objects pre-filled with their Follower objects.
+	 * Selects a collection of RawMessage objects pre-filled with their Follower objects.
 	 * @param      Criteria  $criteria
 	 * @param      PropelPDO $con
 	 * @param      String    $join_behavior the type of joins to use, defaults to Criteria::LEFT_JOIN
-	 * @return     array Array of RawDm objects.
+	 * @return     array Array of RawMessage objects.
 	 * @throws     PropelException Any exceptions caught during processing will be
 	 *		 rethrown wrapped into a PropelException.
 	 */
@@ -490,34 +490,34 @@ abstract class BaseRawDmPeer {
 			$criteria->setDbName(self::DATABASE_NAME);
 		}
 
-		RawDmPeer::addSelectColumns($criteria);
-		$startcol = (RawDmPeer::NUM_COLUMNS - RawDmPeer::NUM_LAZY_LOAD_COLUMNS);
+		RawMessagePeer::addSelectColumns($criteria);
+		$startcol = (RawMessagePeer::NUM_COLUMNS - RawMessagePeer::NUM_LAZY_LOAD_COLUMNS);
 		FollowerPeer::addSelectColumns($criteria);
 
-		$criteria->addJoin(RawDmPeer::FOLLOWER_ID, FollowerPeer::ID, $join_behavior);
+		$criteria->addJoin(RawMessagePeer::FOLLOWER_ID, FollowerPeer::ID, $join_behavior);
 
 		// symfony_behaviors behavior
 		foreach (sfMixer::getCallables(self::getMixerPreSelectHook(__FUNCTION__)) as $sf_hook)
 		{
-		  call_user_func($sf_hook, 'BaseRawDmPeer', $criteria, $con);
+		  call_user_func($sf_hook, 'BaseRawMessagePeer', $criteria, $con);
 		}
 
 		$stmt = BasePeer::doSelect($criteria, $con);
 		$results = array();
 
 		while ($row = $stmt->fetch(PDO::FETCH_NUM)) {
-			$key1 = RawDmPeer::getPrimaryKeyHashFromRow($row, 0);
-			if (null !== ($obj1 = RawDmPeer::getInstanceFromPool($key1))) {
+			$key1 = RawMessagePeer::getPrimaryKeyHashFromRow($row, 0);
+			if (null !== ($obj1 = RawMessagePeer::getInstanceFromPool($key1))) {
 				// We no longer rehydrate the object, since this can cause data loss.
 				// See http://propel.phpdb.org/trac/ticket/509
 				// $obj1->hydrate($row, 0, true); // rehydrate
 			} else {
 
-				$cls = RawDmPeer::getOMClass(false);
+				$cls = RawMessagePeer::getOMClass(false);
 
 				$obj1 = new $cls();
 				$obj1->hydrate($row);
-				RawDmPeer::addInstanceToPool($obj1, $key1);
+				RawMessagePeer::addInstanceToPool($obj1, $key1);
 			} // if $obj1 already loaded
 
 			$key2 = FollowerPeer::getPrimaryKeyHashFromRow($row, $startcol);
@@ -532,8 +532,8 @@ abstract class BaseRawDmPeer {
 					FollowerPeer::addInstanceToPool($obj2, $key2);
 				} // if obj2 already loaded
 				
-				// Add the $obj1 (RawDm) to $obj2 (Follower)
-				$obj2->addRawDm($obj1);
+				// Add the $obj1 (RawMessage) to $obj2 (Follower)
+				$obj2->addRawMessage($obj1);
 
 			} // if joined row was not null
 
@@ -561,14 +561,14 @@ abstract class BaseRawDmPeer {
 		// We need to set the primary table name, since in the case that there are no WHERE columns
 		// it will be impossible for the BasePeer::createSelectSql() method to determine which
 		// tables go into the FROM clause.
-		$criteria->setPrimaryTableName(RawDmPeer::TABLE_NAME);
+		$criteria->setPrimaryTableName(RawMessagePeer::TABLE_NAME);
 
 		if ($distinct && !in_array(Criteria::DISTINCT, $criteria->getSelectModifiers())) {
 			$criteria->setDistinct();
 		}
 
 		if (!$criteria->hasSelectClause()) {
-			RawDmPeer::addSelectColumns($criteria);
+			RawMessagePeer::addSelectColumns($criteria);
 		}
 		
 		$criteria->clearOrderByColumns(); // ORDER BY won't ever affect the count
@@ -577,15 +577,15 @@ abstract class BaseRawDmPeer {
 		$criteria->setDbName(self::DATABASE_NAME);
 
 		if ($con === null) {
-			$con = Propel::getConnection(RawDmPeer::DATABASE_NAME, Propel::CONNECTION_READ);
+			$con = Propel::getConnection(RawMessagePeer::DATABASE_NAME, Propel::CONNECTION_READ);
 		}
 
-		$criteria->addJoin(RawDmPeer::FOLLOWER_ID, FollowerPeer::ID, $join_behavior);
+		$criteria->addJoin(RawMessagePeer::FOLLOWER_ID, FollowerPeer::ID, $join_behavior);
 
 		// symfony_behaviors behavior
 		foreach (sfMixer::getCallables(self::getMixerPreSelectHook(__FUNCTION__)) as $sf_hook)
 		{
-		  call_user_func($sf_hook, 'BaseRawDmPeer', $criteria, $con);
+		  call_user_func($sf_hook, 'BaseRawMessagePeer', $criteria, $con);
 		}
 
 		$stmt = BasePeer::doCount($criteria, $con);
@@ -600,12 +600,12 @@ abstract class BaseRawDmPeer {
 	}
 
 	/**
-	 * Selects a collection of RawDm objects pre-filled with all related objects.
+	 * Selects a collection of RawMessage objects pre-filled with all related objects.
 	 *
 	 * @param      Criteria  $criteria
 	 * @param      PropelPDO $con
 	 * @param      String    $join_behavior the type of joins to use, defaults to Criteria::LEFT_JOIN
-	 * @return     array Array of RawDm objects.
+	 * @return     array Array of RawMessage objects.
 	 * @throws     PropelException Any exceptions caught during processing will be
 	 *		 rethrown wrapped into a PropelException.
 	 */
@@ -618,35 +618,35 @@ abstract class BaseRawDmPeer {
 			$criteria->setDbName(self::DATABASE_NAME);
 		}
 
-		RawDmPeer::addSelectColumns($criteria);
-		$startcol2 = (RawDmPeer::NUM_COLUMNS - RawDmPeer::NUM_LAZY_LOAD_COLUMNS);
+		RawMessagePeer::addSelectColumns($criteria);
+		$startcol2 = (RawMessagePeer::NUM_COLUMNS - RawMessagePeer::NUM_LAZY_LOAD_COLUMNS);
 
 		FollowerPeer::addSelectColumns($criteria);
 		$startcol3 = $startcol2 + (FollowerPeer::NUM_COLUMNS - FollowerPeer::NUM_LAZY_LOAD_COLUMNS);
 
-		$criteria->addJoin(RawDmPeer::FOLLOWER_ID, FollowerPeer::ID, $join_behavior);
+		$criteria->addJoin(RawMessagePeer::FOLLOWER_ID, FollowerPeer::ID, $join_behavior);
 
 		// symfony_behaviors behavior
 		foreach (sfMixer::getCallables(self::getMixerPreSelectHook(__FUNCTION__)) as $sf_hook)
 		{
-		  call_user_func($sf_hook, 'BaseRawDmPeer', $criteria, $con);
+		  call_user_func($sf_hook, 'BaseRawMessagePeer', $criteria, $con);
 		}
 
 		$stmt = BasePeer::doSelect($criteria, $con);
 		$results = array();
 
 		while ($row = $stmt->fetch(PDO::FETCH_NUM)) {
-			$key1 = RawDmPeer::getPrimaryKeyHashFromRow($row, 0);
-			if (null !== ($obj1 = RawDmPeer::getInstanceFromPool($key1))) {
+			$key1 = RawMessagePeer::getPrimaryKeyHashFromRow($row, 0);
+			if (null !== ($obj1 = RawMessagePeer::getInstanceFromPool($key1))) {
 				// We no longer rehydrate the object, since this can cause data loss.
 				// See http://propel.phpdb.org/trac/ticket/509
 				// $obj1->hydrate($row, 0, true); // rehydrate
 			} else {
-				$cls = RawDmPeer::getOMClass(false);
+				$cls = RawMessagePeer::getOMClass(false);
 
 				$obj1 = new $cls();
 				$obj1->hydrate($row);
-				RawDmPeer::addInstanceToPool($obj1, $key1);
+				RawMessagePeer::addInstanceToPool($obj1, $key1);
 			} // if obj1 already loaded
 
 			// Add objects for joined Follower rows
@@ -663,8 +663,8 @@ abstract class BaseRawDmPeer {
 					FollowerPeer::addInstanceToPool($obj2, $key2);
 				} // if obj2 loaded
 
-				// Add the $obj1 (RawDm) to the collection in $obj2 (Follower)
-				$obj2->addRawDm($obj1);
+				// Add the $obj1 (RawMessage) to the collection in $obj2 (Follower)
+				$obj2->addRawMessage($obj1);
 			} // if joined row not null
 
 			$results[] = $obj1;
@@ -690,10 +690,10 @@ abstract class BaseRawDmPeer {
 	 */
 	public static function buildTableMap()
 	{
-	  $dbMap = Propel::getDatabaseMap(BaseRawDmPeer::DATABASE_NAME);
-	  if (!$dbMap->hasTable(BaseRawDmPeer::TABLE_NAME))
+	  $dbMap = Propel::getDatabaseMap(BaseRawMessagePeer::DATABASE_NAME);
+	  if (!$dbMap->hasTable(BaseRawMessagePeer::TABLE_NAME))
 	  {
-	    $dbMap->addTableObject(new RawDmTableMap());
+	    $dbMap->addTableObject(new RawMessageTableMap());
 	  }
 	}
 
@@ -710,13 +710,13 @@ abstract class BaseRawDmPeer {
 	 */
 	public static function getOMClass($withPrefix = true)
 	{
-		return $withPrefix ? RawDmPeer::CLASS_DEFAULT : RawDmPeer::OM_CLASS;
+		return $withPrefix ? RawMessagePeer::CLASS_DEFAULT : RawMessagePeer::OM_CLASS;
 	}
 
 	/**
-	 * Method perform an INSERT on the database, given a RawDm or Criteria object.
+	 * Method perform an INSERT on the database, given a RawMessage or Criteria object.
 	 *
-	 * @param      mixed $values Criteria or RawDm object containing data that is used to create the INSERT statement.
+	 * @param      mixed $values Criteria or RawMessage object containing data that is used to create the INSERT statement.
 	 * @param      PropelPDO $con the PropelPDO connection to use
 	 * @return     mixed The new primary key.
 	 * @throws     PropelException Any exceptions caught during processing will be
@@ -725,26 +725,26 @@ abstract class BaseRawDmPeer {
 	public static function doInsert($values, PropelPDO $con = null)
 	{
     // symfony_behaviors behavior
-    foreach (sfMixer::getCallables('BaseRawDmPeer:doInsert:pre') as $sf_hook)
+    foreach (sfMixer::getCallables('BaseRawMessagePeer:doInsert:pre') as $sf_hook)
     {
-      if (false !== $sf_hook_retval = call_user_func($sf_hook, 'BaseRawDmPeer', $values, $con))
+      if (false !== $sf_hook_retval = call_user_func($sf_hook, 'BaseRawMessagePeer', $values, $con))
       {
         return $sf_hook_retval;
       }
     }
 
 		if ($con === null) {
-			$con = Propel::getConnection(RawDmPeer::DATABASE_NAME, Propel::CONNECTION_WRITE);
+			$con = Propel::getConnection(RawMessagePeer::DATABASE_NAME, Propel::CONNECTION_WRITE);
 		}
 
 		if ($values instanceof Criteria) {
 			$criteria = clone $values; // rename for clarity
 		} else {
-			$criteria = $values->buildCriteria(); // build Criteria from RawDm object
+			$criteria = $values->buildCriteria(); // build Criteria from RawMessage object
 		}
 
-		if ($criteria->containsKey(RawDmPeer::ID) && $criteria->keyContainsValue(RawDmPeer::ID) ) {
-			throw new PropelException('Cannot insert a value for auto-increment primary key ('.RawDmPeer::ID.')');
+		if ($criteria->containsKey(RawMessagePeer::ID) && $criteria->keyContainsValue(RawMessagePeer::ID) ) {
+			throw new PropelException('Cannot insert a value for auto-increment primary key ('.RawMessagePeer::ID.')');
 		}
 
 
@@ -763,18 +763,18 @@ abstract class BaseRawDmPeer {
 		}
 
     // symfony_behaviors behavior
-    foreach (sfMixer::getCallables('BaseRawDmPeer:doInsert:post') as $sf_hook)
+    foreach (sfMixer::getCallables('BaseRawMessagePeer:doInsert:post') as $sf_hook)
     {
-      call_user_func($sf_hook, 'BaseRawDmPeer', $values, $con, $pk);
+      call_user_func($sf_hook, 'BaseRawMessagePeer', $values, $con, $pk);
     }
 
 		return $pk;
 	}
 
 	/**
-	 * Method perform an UPDATE on the database, given a RawDm or Criteria object.
+	 * Method perform an UPDATE on the database, given a RawMessage or Criteria object.
 	 *
-	 * @param      mixed $values Criteria or RawDm object containing data that is used to create the UPDATE statement.
+	 * @param      mixed $values Criteria or RawMessage object containing data that is used to create the UPDATE statement.
 	 * @param      PropelPDO $con The connection to use (specify PropelPDO connection object to exert more control over transactions).
 	 * @return     int The number of affected rows (if supported by underlying database driver).
 	 * @throws     PropelException Any exceptions caught during processing will be
@@ -783,16 +783,16 @@ abstract class BaseRawDmPeer {
 	public static function doUpdate($values, PropelPDO $con = null)
 	{
     // symfony_behaviors behavior
-    foreach (sfMixer::getCallables('BaseRawDmPeer:doUpdate:pre') as $sf_hook)
+    foreach (sfMixer::getCallables('BaseRawMessagePeer:doUpdate:pre') as $sf_hook)
     {
-      if (false !== $sf_hook_retval = call_user_func($sf_hook, 'BaseRawDmPeer', $values, $con))
+      if (false !== $sf_hook_retval = call_user_func($sf_hook, 'BaseRawMessagePeer', $values, $con))
       {
         return $sf_hook_retval;
       }
     }
 
 		if ($con === null) {
-			$con = Propel::getConnection(RawDmPeer::DATABASE_NAME, Propel::CONNECTION_WRITE);
+			$con = Propel::getConnection(RawMessagePeer::DATABASE_NAME, Propel::CONNECTION_WRITE);
 		}
 
 		$selectCriteria = new Criteria(self::DATABASE_NAME);
@@ -800,10 +800,10 @@ abstract class BaseRawDmPeer {
 		if ($values instanceof Criteria) {
 			$criteria = clone $values; // rename for clarity
 
-			$comparison = $criteria->getComparison(RawDmPeer::ID);
-			$selectCriteria->add(RawDmPeer::ID, $criteria->remove(RawDmPeer::ID), $comparison);
+			$comparison = $criteria->getComparison(RawMessagePeer::ID);
+			$selectCriteria->add(RawMessagePeer::ID, $criteria->remove(RawMessagePeer::ID), $comparison);
 
-		} else { // $values is RawDm object
+		} else { // $values is RawMessage object
 			$criteria = $values->buildCriteria(); // gets full criteria
 			$selectCriteria = $values->buildPkeyCriteria(); // gets criteria w/ primary key(s)
 		}
@@ -814,35 +814,35 @@ abstract class BaseRawDmPeer {
 		$ret = BasePeer::doUpdate($selectCriteria, $criteria, $con);
 
     // symfony_behaviors behavior
-    foreach (sfMixer::getCallables('BaseRawDmPeer:doUpdate:post') as $sf_hook)
+    foreach (sfMixer::getCallables('BaseRawMessagePeer:doUpdate:post') as $sf_hook)
     {
-      call_user_func($sf_hook, 'BaseRawDmPeer', $values, $con, $ret);
+      call_user_func($sf_hook, 'BaseRawMessagePeer', $values, $con, $ret);
     }
 
     return $ret;
 	}
 
 	/**
-	 * Method to DELETE all rows from the raw_dm table.
+	 * Method to DELETE all rows from the raw_message table.
 	 *
 	 * @return     int The number of affected rows (if supported by underlying database driver).
 	 */
 	public static function doDeleteAll($con = null)
 	{
 		if ($con === null) {
-			$con = Propel::getConnection(RawDmPeer::DATABASE_NAME, Propel::CONNECTION_WRITE);
+			$con = Propel::getConnection(RawMessagePeer::DATABASE_NAME, Propel::CONNECTION_WRITE);
 		}
 		$affectedRows = 0; // initialize var to track total num of affected rows
 		try {
 			// use transaction because $criteria could contain info
 			// for more than one table or we could emulating ON DELETE CASCADE, etc.
 			$con->beginTransaction();
-			$affectedRows += BasePeer::doDeleteAll(RawDmPeer::TABLE_NAME, $con);
+			$affectedRows += BasePeer::doDeleteAll(RawMessagePeer::TABLE_NAME, $con);
 			// Because this db requires some delete cascade/set null emulation, we have to
 			// clear the cached instance *after* the emulation has happened (since
 			// instances get re-added by the select statement contained therein).
-			RawDmPeer::clearInstancePool();
-			RawDmPeer::clearRelatedInstancePool();
+			RawMessagePeer::clearInstancePool();
+			RawMessagePeer::clearRelatedInstancePool();
 			$con->commit();
 			return $affectedRows;
 		} catch (PropelException $e) {
@@ -852,9 +852,9 @@ abstract class BaseRawDmPeer {
 	}
 
 	/**
-	 * Method perform a DELETE on the database, given a RawDm or Criteria object OR a primary key value.
+	 * Method perform a DELETE on the database, given a RawMessage or Criteria object OR a primary key value.
 	 *
-	 * @param      mixed $values Criteria or RawDm object or primary key or array of primary keys
+	 * @param      mixed $values Criteria or RawMessage object or primary key or array of primary keys
 	 *              which is used to create the DELETE statement
 	 * @param      PropelPDO $con the connection to use
 	 * @return     int 	The number of affected rows (if supported by underlying database driver).  This includes CASCADE-related rows
@@ -865,27 +865,27 @@ abstract class BaseRawDmPeer {
 	 public static function doDelete($values, PropelPDO $con = null)
 	 {
 		if ($con === null) {
-			$con = Propel::getConnection(RawDmPeer::DATABASE_NAME, Propel::CONNECTION_WRITE);
+			$con = Propel::getConnection(RawMessagePeer::DATABASE_NAME, Propel::CONNECTION_WRITE);
 		}
 
 		if ($values instanceof Criteria) {
 			// invalidate the cache for all objects of this type, since we have no
 			// way of knowing (without running a query) what objects should be invalidated
 			// from the cache based on this Criteria.
-			RawDmPeer::clearInstancePool();
+			RawMessagePeer::clearInstancePool();
 			// rename for clarity
 			$criteria = clone $values;
-		} elseif ($values instanceof RawDm) { // it's a model object
+		} elseif ($values instanceof RawMessage) { // it's a model object
 			// invalidate the cache for this single object
-			RawDmPeer::removeInstanceFromPool($values);
+			RawMessagePeer::removeInstanceFromPool($values);
 			// create criteria based on pk values
 			$criteria = $values->buildPkeyCriteria();
 		} else { // it's a primary key, or an array of pks
 			$criteria = new Criteria(self::DATABASE_NAME);
-			$criteria->add(RawDmPeer::ID, (array) $values, Criteria::IN);
+			$criteria->add(RawMessagePeer::ID, (array) $values, Criteria::IN);
 			// invalidate the cache for this object(s)
 			foreach ((array) $values as $singleval) {
-				RawDmPeer::removeInstanceFromPool($singleval);
+				RawMessagePeer::removeInstanceFromPool($singleval);
 			}
 		}
 
@@ -900,7 +900,7 @@ abstract class BaseRawDmPeer {
 			$con->beginTransaction();
 			
 			$affectedRows += BasePeer::doDelete($criteria, $con);
-			RawDmPeer::clearRelatedInstancePool();
+			RawMessagePeer::clearRelatedInstancePool();
 			$con->commit();
 			return $affectedRows;
 		} catch (PropelException $e) {
@@ -910,24 +910,24 @@ abstract class BaseRawDmPeer {
 	}
 
 	/**
-	 * Validates all modified columns of given RawDm object.
+	 * Validates all modified columns of given RawMessage object.
 	 * If parameter $columns is either a single column name or an array of column names
 	 * than only those columns are validated.
 	 *
 	 * NOTICE: This does not apply to primary or foreign keys for now.
 	 *
-	 * @param      RawDm $obj The object to validate.
+	 * @param      RawMessage $obj The object to validate.
 	 * @param      mixed $cols Column name or array of column names.
 	 *
 	 * @return     mixed TRUE if all columns are valid or the error message of the first invalid column.
 	 */
-	public static function doValidate(RawDm $obj, $cols = null)
+	public static function doValidate(RawMessage $obj, $cols = null)
 	{
 		$columns = array();
 
 		if ($cols) {
-			$dbMap = Propel::getDatabaseMap(RawDmPeer::DATABASE_NAME);
-			$tableMap = $dbMap->getTable(RawDmPeer::TABLE_NAME);
+			$dbMap = Propel::getDatabaseMap(RawMessagePeer::DATABASE_NAME);
+			$tableMap = $dbMap->getTable(RawMessagePeer::TABLE_NAME);
 
 			if (! is_array($cols)) {
 				$cols = array($cols);
@@ -943,7 +943,7 @@ abstract class BaseRawDmPeer {
 
 		}
 
-		return BasePeer::doValidate(RawDmPeer::DATABASE_NAME, RawDmPeer::TABLE_NAME, $columns);
+		return BasePeer::doValidate(RawMessagePeer::DATABASE_NAME, RawMessagePeer::TABLE_NAME, $columns);
 	}
 
 	/**
@@ -951,23 +951,23 @@ abstract class BaseRawDmPeer {
 	 *
 	 * @param      int $pk the primary key.
 	 * @param      PropelPDO $con the connection to use
-	 * @return     RawDm
+	 * @return     RawMessage
 	 */
 	public static function retrieveByPK($pk, PropelPDO $con = null)
 	{
 
-		if (null !== ($obj = RawDmPeer::getInstanceFromPool((string) $pk))) {
+		if (null !== ($obj = RawMessagePeer::getInstanceFromPool((string) $pk))) {
 			return $obj;
 		}
 
 		if ($con === null) {
-			$con = Propel::getConnection(RawDmPeer::DATABASE_NAME, Propel::CONNECTION_READ);
+			$con = Propel::getConnection(RawMessagePeer::DATABASE_NAME, Propel::CONNECTION_READ);
 		}
 
-		$criteria = new Criteria(RawDmPeer::DATABASE_NAME);
-		$criteria->add(RawDmPeer::ID, $pk);
+		$criteria = new Criteria(RawMessagePeer::DATABASE_NAME);
+		$criteria->add(RawMessagePeer::ID, $pk);
 
-		$v = RawDmPeer::doSelect($criteria, $con);
+		$v = RawMessagePeer::doSelect($criteria, $con);
 
 		return !empty($v) > 0 ? $v[0] : null;
 	}
@@ -983,16 +983,16 @@ abstract class BaseRawDmPeer {
 	public static function retrieveByPKs($pks, PropelPDO $con = null)
 	{
 		if ($con === null) {
-			$con = Propel::getConnection(RawDmPeer::DATABASE_NAME, Propel::CONNECTION_READ);
+			$con = Propel::getConnection(RawMessagePeer::DATABASE_NAME, Propel::CONNECTION_READ);
 		}
 
 		$objs = null;
 		if (empty($pks)) {
 			$objs = array();
 		} else {
-			$criteria = new Criteria(RawDmPeer::DATABASE_NAME);
-			$criteria->add(RawDmPeer::ID, $pks, Criteria::IN);
-			$objs = RawDmPeer::doSelect($criteria, $con);
+			$criteria = new Criteria(RawMessagePeer::DATABASE_NAME);
+			$criteria->add(RawMessagePeer::ID, $pks, Criteria::IN);
+			$objs = RawMessagePeer::doSelect($criteria, $con);
 		}
 		return $objs;
 	}
@@ -1024,15 +1024,15 @@ abstract class BaseRawDmPeer {
 	{
 	  if (preg_match('/^do(Select|Count)(Join(All(Except)?)?|Stmt)?/', $method, $match))
 	  {
-	    return sprintf('BaseRawDmPeer:%s:%1$s', 'Count' == $match[1] ? 'doCount' : $match[0]);
+	    return sprintf('BaseRawMessagePeer:%s:%1$s', 'Count' == $match[1] ? 'doCount' : $match[0]);
 	  }
 	
 	  throw new LogicException(sprintf('Unrecognized function "%s"', $method));
 	}
 
-} // BaseRawDmPeer
+} // BaseRawMessagePeer
 
 // This is the static code needed to register the TableMap for this table with the main Propel class.
 //
-BaseRawDmPeer::buildTableMap();
+BaseRawMessagePeer::buildTableMap();
 

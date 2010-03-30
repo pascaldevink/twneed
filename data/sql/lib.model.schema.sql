@@ -44,6 +44,27 @@ CREATE TABLE `raw_dm`
 )Type=InnoDB;
 
 #-----------------------------------------------------------------------------
+#-- raw_message
+#-----------------------------------------------------------------------------
+
+DROP TABLE IF EXISTS `raw_message`;
+
+
+CREATE TABLE `raw_message`
+(
+	`id` INTEGER  NOT NULL AUTO_INCREMENT,
+	`message_id` BIGINT  NOT NULL,
+	`created_at` BIGINT  NOT NULL,
+	`text` VARCHAR(140)  NOT NULL,
+	`follower_id` INTEGER  NOT NULL,
+	PRIMARY KEY (`id`),
+	INDEX `raw_message_FI_1` (`follower_id`),
+	CONSTRAINT `raw_message_FK_1`
+		FOREIGN KEY (`follower_id`)
+		REFERENCES `follower` (`id`)
+)Type=InnoDB;
+
+#-----------------------------------------------------------------------------
 #-- follower
 #-----------------------------------------------------------------------------
 

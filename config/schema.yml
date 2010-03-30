@@ -13,6 +13,12 @@ propel:
     created_at:         { type: bigint, required: true }
     text:               { type: varchar(140), required: true }
     follower_id:        { type: integer, foreignTable: follower, foreignReference: id, required: true }
+  raw_message:
+    id:                 ~
+    message_id:         { type: bigint, required: true }
+    created_at:         { type: bigint, required: true }
+    text:               { type: varchar(140), required: true }
+    follower_id:        { type: integer, foreignTable: follower, foreignReference: id, required: true }
   follower:
     id:                 ~
     following:          { type: boolean, required: true }

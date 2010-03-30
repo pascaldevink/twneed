@@ -31,11 +31,36 @@
 
             </div>
             <div class="legal">
-                <a onclick="return sendOffsite(this, '/outbound/37signals.com')" href="http://37signals.com"><img width="181" height="40" alt="twitterineed" src="/images/logo.png"></a><br />
-
-                All text and design is copyright &copy;1999-2010 37signals, LLC. All rights reserved.<br /><br />
-                <a href="http://37signals.com/security">Security Information</a>
+                <a href="http://twneed.inpiggy.nl"><img width="181" height="40" alt="Twitter I Need" src="/images/logo_twneed.png"></a>
+                <a href="http://www.inpiggy.nl"><img width="181" height="40" alt="InPiggy" src="/images/logo_inpiggy.png"></a>
+                <br />
+                All text and design is copyright &copy;2009-2010 InPiggy. All rights reserved.<br /><br />
             </div>
         </div>
+
+        <script type="text/javascript">
+            var uservoiceOptions = {
+              /* required */
+              key: 'twneed',
+              host: 'twneed.uservoice.com',
+              forum: '48645',
+              showTab: true,
+              /* optional */
+              alignment: 'left',
+              background_color:'#222',
+              text_color: 'white',
+              hover_color: '#f00',
+              lang: 'en'
+            };
+
+            function _loadUserVoice() {
+              var s = document.createElement('script');
+              s.setAttribute('type', 'text/javascript');
+              s.setAttribute('src', ("https:" == document.location.protocol ? "https://" : "http://") + "cdn.uservoice.com/javascripts/widgets/tab.js");
+              document.getElementsByTagName('head')[0].appendChild(s);
+            }
+            _loadSuper = window.onload;
+            window.onload = (typeof window.onload != 'function') ? _loadUserVoice : function() { _loadSuper(); _loadUserVoice(); };
+        </script>
     </body>
 </html>

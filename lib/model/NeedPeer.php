@@ -27,25 +27,74 @@ class NeedPeer extends BaseNeedPeer {
 
         $message = $dm->getText();
 
+        $parsedMessage = self::parseMessage($message);
+
+        $need->setDescription($parsedMessage['message']);
+        $need->setTimeframe($parsedMessage['time']);
+        $need->setLocation($parsedMessage['location']);
+        $need->save();
+
+        return $need;
+    }
+
+    public static function convertMessage(RawMessage $rawmessage, PropelPDO $con = null)
+    {
+        if (is_null($rawmessage)) return null;
+
+        $need = new Need();
+        $need->setAuthor($rawmessage->getFollower()->getSenderScreenName());
+
+        $message = $rawmessage->getText();
+
+        $parsedMessage = self::parseMessage($message);
+
+        $need->setDescription($parsedMessage['message']);
+        $need->setTimeframe($parsedMessage['time']);
+        $need->setLocation($parsedMessage['location']);
+        $need->save();
+
+        return $need;
+    }
+
+    private static function parseMessage($message)
+    {
+        $ret_val = array();
+        $cut_length = 7;
+
+        if (substr($message, 0, 1) === '@')
+        {
+            $cut_lenght += strstr($message, ' ');
+        }
+
         // Strip need request
         $message = substr($message, 7);
 
         // Find location
         $within_location = strripos($message, 'within');
-        $location = trim(substr($message, $within_location, strlen($message)));
-        $message = trim(substr($message, 0, $within_location));
+        if ($within_location == false)
+        {
+            $within_location = strripos($message, 'at');
+        }
+
+        if ($within_location)
+        {
+            $location = trim(substr($message, $within_location, strlen($message)));
+            $message = trim(substr($message, 0, $within_location));
+            $ret_val['location'] = $location;
+        }
 
         // Find timeframe
         $time_location = strripos($message, 'in');
-        $time = trim(substr($message, $time_location, strlen($message)));
-        $message = trim(substr($message, 0, $time_location));
+        if ($time_location)
+        {
+            $time = trim(substr($message, $time_location, strlen($message)));
+            $message = trim(substr($message, 0, $time_location));
+            $ret_val['time'] = $time;
+        }
+        
+        $ret_val['message'] = $message;
 
-        $need->setDescription($message);
-        $need->setTimeframe($time);
-        $need->setLocation($location);
-        $need->save();
-
-        return $need;
+        return $ret_val;
     }
 
     public static function retrieveAllNeeds(PropelPDO $con = null)
