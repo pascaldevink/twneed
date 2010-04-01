@@ -47,7 +47,7 @@ class RawDmPeer extends BaseRawDmPeer {
     public static function getLastDM(PropelPDO $con = null)
     {
         $crit = new Criteria();
-        $crit->addAscendingOrderByColumn(self::CREATED_AT);
+        $crit->addDescendingOrderByColumn(self::CREATED_AT);
 
         return self::doSelectOne($crit, $con);
     }

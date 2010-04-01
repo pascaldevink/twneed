@@ -47,7 +47,7 @@ class RawMessagePeer extends BaseRawMessagePeer {
     public static function getLastMessage(PropelPDO $con = null)
     {
         $crit = new Criteria();
-        $crit->addAscendingOrderByColumn(self::CREATED_AT);
+        $crit->addDescendingOrderByColumn(self::CREATED_AT);
 
         return self::doSelectOne($crit, $con);
     }
