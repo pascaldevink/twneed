@@ -61,13 +61,13 @@ class NeedPeer extends BaseNeedPeer {
         $ret_val = array();
         $cut_length = 7;
 
-        if (substr($message, 0, 1) === '@')
+        if (substr($message, 0, 1) == '@')
         {
-            $cut_lenght += strstr($message, ' ');
+            $cut_length = $cut_length + strpos($message, ' ') + 1;
         }
 
         // Strip need request
-        $message = substr($message, 7);
+        $message = substr($message, $cut_length);
 
         // Find location
         $within_location = strripos($message, 'within');
@@ -102,7 +102,7 @@ class NeedPeer extends BaseNeedPeer {
         return self::doSelect(new Criteria(), $con);
     }
 
-    public static function retrieveLatestNeeds($limit = 10, PropelPDO $con = null)
+    public static function retrieveLatestNeeds($limit = 8, PropelPDO $con = null)
     {
         $crit = new Criteria();
         $crit->addAscendingOrderByColumn(self::CREATED_AT);
