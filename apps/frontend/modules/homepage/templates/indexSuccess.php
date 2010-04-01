@@ -3,14 +3,14 @@
 
         <div class="blurb extras buzz">
             <h4 style="margin-bottom: 10px;">Last requested needs</h4>
-            <div count="8" class="extra_extra_news">
+            <div class="extra_extra_news">
                 <ul id="needslist">
                     <?php include_partial('homepage/needlist', array('needs' => $needs)) ?>
                 </ul>
             </div>
         </div>
         <p>
-            We allready served <?php echo $number_of_needs ?> needs. <br />
+            We already served <?php echo $number_of_needs ?> needs. <br />
             <span><?php echo $quote ?></span>
         </p>
     </div>
