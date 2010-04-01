@@ -45,7 +45,14 @@ EOF;
     foreach ($messages as $message)
     {
         $rawmessage = RawMessagePeer::saveMessage($message, $connection);
-        $need = NeedPeer::convertMessage($rawmessage, $con);
+        if ($rawmessage instanceof RawMessage)
+        {
+            $need = NeedPeer::convertMessage($rawmessage, $con);
+        }
+        else
+        {
+            var_dump($rawmessage);
+        }
     }
   }
 }

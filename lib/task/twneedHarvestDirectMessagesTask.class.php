@@ -45,7 +45,14 @@ EOF;
     foreach ($dms as $dm)
     {
         $rawdm = RawDmPeer::saveDirectMessage($dm, $connection);
-        $need = NeedPeer::convertDirectMessage($rawdm, $connection);
+        if ($rawdm instanceof RawDm)
+        {
+            $need = NeedPeer::convertDirectMessage($rawdm, $connection);
+        }
+        else
+        {
+            var_dump($rawdm);
+        }
     }
     
   }
