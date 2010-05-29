@@ -1,0 +1,333 @@
+May 03 09:38:13 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'homepage',  'action' => 'index',)
+May 03 09:38:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 03 09:38:13 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 03 09:38:13 symfony [info] {homepageActions} Call "homepageActions->executeIndex()"
+May 03 09:38:13 symfony [err] {PropelException} Unable to open PDO connection [wrapped: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)]
+May 03 09:38:13 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 03 09:38:13 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 03 09:38:13 symfony [info] {sfWebDebugLogger} Configuration 285.99 ms (8)
+May 03 09:38:13 symfony [info] {sfWebDebugLogger} Factories 130.22 ms (1)
+May 03 09:38:13 symfony [info] {sfWebDebugLogger} Action "homepage/index" 70.51 ms (1)
+May 03 10:05:23 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'homepage',  'action' => 'index',)
+May 03 10:05:23 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 03 10:05:23 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 03 10:05:23 symfony [info] {homepageActions} Call "homepageActions->executeIndex()"
+May 03 10:05:23 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    4.3 MB | mempeak:    4.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 03 10:05:23 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    4.5 MB | mempeak:    4.5 MB | memdelta:      0.0 B | SELECT need.ID, need.AUTHOR, need.DESCRIPTION, need.TIMEFRAME, need.LOCATION, need.CREATED_AT, need.UPDATED_AT FROM `need` ORDER BY need.CREATED_AT ASC LIMIT 8
+May 03 10:05:24 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/apps/frontend/modules/homepage/templates/indexSuccess.php"
+May 03 10:05:24 symfony [info] {sfPartialView} Render "/Users/pascaldevink/Development/Projects/twneed/apps/frontend/modules/homepage/templates/_needlist.php"
+May 03 10:05:24 symfony [info] {sfPHPView} Decorate content with "/Users/pascaldevink/Development/Projects/twneed/apps/frontend/templates/layout.php"
+May 03 10:05:24 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/apps/frontend/templates/layout.php"
+May 03 10:05:24 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 03 10:05:24 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 03 10:05:24 symfony [info] {sfWebDebugLogger} Configuration 34.92 ms (10)
+May 03 10:05:24 symfony [info] {sfWebDebugLogger} Factories 23.16 ms (1)
+May 03 10:05:24 symfony [info] {sfWebDebugLogger} Action "homepage/index" 757.14 ms (1)
+May 03 10:05:24 symfony [info] {sfWebDebugLogger} View "Success" for "homepage/index" 58.02 ms (1)
+May 03 10:05:24 symfony [info] {sfWebDebugLogger} Partial "homepage/_needlist" 1.11 ms (1)
+May 03 10:05:24 symfony [info] {sfWebResponse} Send content (36401 o)
+May 06 19:46:31 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'homepage',  'action' => 'index',)
+May 06 19:46:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 06 19:46:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 06 19:46:32 symfony [info] {homepageActions} Call "homepageActions->executeIndex()"
+May 06 19:46:32 symfony [err] {PropelException} Unable to open PDO connection [wrapped: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)]
+May 06 19:46:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 06 19:46:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 06 19:46:32 symfony [info] {sfWebDebugLogger} Configuration 3.20 ms (8)
+May 06 19:46:32 symfony [info] {sfWebDebugLogger} Factories 156.84 ms (1)
+May 06 19:46:32 symfony [info] {sfWebDebugLogger} Action "homepage/index" 148.65 ms (1)
+May 06 19:50:56 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'homepage',  'action' => 'index',)
+May 06 19:50:56 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 06 19:50:56 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 06 19:50:56 symfony [info] {homepageActions} Call "homepageActions->executeIndex()"
+May 06 19:50:56 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    4.8 MB | mempeak:    4.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 06 19:50:56 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    5.0 MB | mempeak:    5.0 MB | memdelta:      0.0 B | SELECT need.ID, need.AUTHOR, need.DESCRIPTION, need.TIMEFRAME, need.LOCATION, need.CREATED_AT, need.UPDATED_AT FROM `need` ORDER BY need.CREATED_AT ASC LIMIT 8
+May 06 19:50:57 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/apps/frontend/modules/homepage/templates/indexSuccess.php"
+May 06 19:50:57 symfony [info] {sfPartialView} Render "/Users/pascaldevink/Development/Projects/twneed/apps/frontend/modules/homepage/templates/_needlist.php"
+May 06 19:50:57 symfony [info] {sfPHPView} Decorate content with "/Users/pascaldevink/Development/Projects/twneed/apps/frontend/templates/layout.php"
+May 06 19:50:57 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/apps/frontend/templates/layout.php"
+May 06 19:50:57 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 06 19:50:57 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 06 19:50:57 symfony [info] {sfWebDebugLogger} Configuration 38.14 ms (10)
+May 06 19:50:57 symfony [info] {sfWebDebugLogger} Factories 33.40 ms (1)
+May 06 19:50:57 symfony [info] {sfWebDebugLogger} Action "homepage/index" 594.10 ms (1)
+May 06 19:50:57 symfony [info] {sfWebDebugLogger} View "Success" for "homepage/index" 90.67 ms (1)
+May 06 19:50:57 symfony [info] {sfWebDebugLogger} Partial "homepage/_needlist" 1.50 ms (1)
+May 06 19:50:57 symfony [info] {sfWebResponse} Send content (36640 o)
+May 14 18:45:02 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'homepage',  'action' => 'index',)
+May 14 18:45:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 14 18:45:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 14 18:45:02 symfony [info] {homepageActions} Call "homepageActions->executeIndex()"
+May 14 18:45:02 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    5.3 MB | mempeak:    5.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 14 18:45:02 symfony [debug] {sfPropelLogger} time:  0.013 sec | slow:  NO | mem:    5.5 MB | mempeak:    5.5 MB | memdelta:      0.0 B | SELECT need.ID, need.AUTHOR, need.DESCRIPTION, need.TIMEFRAME, need.LOCATION, need.CREATED_AT, need.UPDATED_AT FROM `need` ORDER BY need.CREATED_AT ASC LIMIT 8
+May 14 18:45:05 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/modules/homepage/templates/indexSuccess.php"
+May 14 18:45:05 symfony [info] {sfPartialView} Render "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/modules/homepage/templates/_needlist.php"
+May 14 18:45:05 symfony [info] {sfPHPView} Decorate content with "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/templates/layout.php"
+May 14 18:45:05 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/templates/layout.php"
+May 14 18:45:05 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 14 18:45:05 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 14 18:45:05 symfony [info] {sfWebDebugLogger} Configuration 897.88 ms (9)
+May 14 18:45:05 symfony [info] {sfWebDebugLogger} Factories 395.33 ms (1)
+May 14 18:45:05 symfony [info] {sfWebDebugLogger} Action "homepage/index" 2838.36 ms (1)
+May 14 18:45:05 symfony [info] {sfWebDebugLogger} View "Success" for "homepage/index" 100.40 ms (1)
+May 14 18:45:05 symfony [info] {sfWebDebugLogger} Partial "homepage/_needlist" 1.34 ms (1)
+May 14 18:45:05 symfony [info] {sfWebResponse} Send content (36492 o)
+May 29 18:12:15 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'homepage',  'action' => 'index',)
+May 29 18:12:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 29 18:12:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 29 18:12:15 symfony [info] {homepageActions} Call "homepageActions->executeIndex()"
+May 29 18:12:15 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.3 MB | mempeak:    5.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 29 18:12:15 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    5.5 MB | mempeak:    5.5 MB | memdelta:      0.0 B | SELECT need.ID, need.AUTHOR, need.DESCRIPTION, need.TIMEFRAME, need.LOCATION, need.CREATED_AT, need.UPDATED_AT FROM `need` ORDER BY need.CREATED_AT ASC LIMIT 8
+May 29 18:12:16 symfony [err] {sfRenderException} The template "indexSuccess.iphone.php" does not exist or is unreadable in "".
+May 29 18:12:16 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 29 18:12:16 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 29 18:12:22 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'homepage',  'action' => 'index',)
+May 29 18:12:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 29 18:12:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 29 18:12:22 symfony [info] {homepageActions} Call "homepageActions->executeIndex()"
+May 29 18:12:22 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    4.3 MB | mempeak:    4.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 29 18:12:22 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    4.5 MB | mempeak:    4.5 MB | memdelta:      0.0 B | SELECT need.ID, need.AUTHOR, need.DESCRIPTION, need.TIMEFRAME, need.LOCATION, need.CREATED_AT, need.UPDATED_AT FROM `need` ORDER BY need.CREATED_AT ASC LIMIT 8
+May 29 18:12:22 symfony [err] {sfRenderException} The template "indexSuccess.iphone.php" does not exist or is unreadable in "".
+May 29 18:12:22 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 29 18:12:22 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 29 18:12:58 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'homepage',  'action' => 'index',)
+May 29 18:12:58 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 29 18:12:58 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 29 18:12:58 symfony [info] {homepageActions} Call "homepageActions->executeIndex()"
+May 29 18:12:58 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    4.3 MB | mempeak:    4.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 29 18:12:58 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    4.5 MB | mempeak:    4.5 MB | memdelta:      0.0 B | SELECT need.ID, need.AUTHOR, need.DESCRIPTION, need.TIMEFRAME, need.LOCATION, need.CREATED_AT, need.UPDATED_AT FROM `need` ORDER BY need.CREATED_AT ASC LIMIT 8
+May 29 18:12:58 symfony [err] {sfRenderException} The decorator template "layout.iphone.php" does not exist or is unreadable in "".
+May 29 18:12:59 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 29 18:12:59 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 29 18:28:39 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'homepage',  'action' => 'index',)
+May 29 18:28:39 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 29 18:28:39 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 29 18:28:39 symfony [info] {homepageActions} Call "homepageActions->executeIndex()"
+May 29 18:28:39 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    4.3 MB | mempeak:    4.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 29 18:28:39 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    4.5 MB | mempeak:    4.5 MB | memdelta:      0.0 B | SELECT need.ID, need.AUTHOR, need.DESCRIPTION, need.TIMEFRAME, need.LOCATION, need.CREATED_AT, need.UPDATED_AT FROM `need` ORDER BY need.CREATED_AT ASC LIMIT 8
+May 29 18:28:39 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/modules/homepage/templates/indexSuccess.iphone.php"
+May 29 18:28:39 symfony [info] {sfPHPView} Decorate content with "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/templates/layout.iphone.php"
+May 29 18:28:39 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/templates/layout.iphone.php"
+May 29 18:28:39 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 29 18:28:39 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 29 18:28:39 symfony [info] {sfWebDebugLogger} Configuration 17.44 ms (10)
+May 29 18:28:39 symfony [info] {sfWebDebugLogger} Factories 32.46 ms (1)
+May 29 18:28:39 symfony [info] {sfWebDebugLogger} Action "homepage/index" 522.84 ms (1)
+May 29 18:28:39 symfony [info] {sfWebDebugLogger} View "Success" for "homepage/index" 29.21 ms (1)
+May 29 18:28:39 symfony [info] {sfWebResponse} Send content (31491 o)
+May 29 18:29:40 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'homepage',  'action' => 'index',)
+May 29 18:29:40 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 29 18:29:40 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 29 18:29:40 symfony [info] {homepageActions} Call "homepageActions->executeIndex()"
+May 29 18:29:40 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    4.3 MB | mempeak:    4.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 29 18:29:40 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    4.5 MB | mempeak:    4.5 MB | memdelta:      0.0 B | SELECT need.ID, need.AUTHOR, need.DESCRIPTION, need.TIMEFRAME, need.LOCATION, need.CREATED_AT, need.UPDATED_AT FROM `need` ORDER BY need.CREATED_AT ASC LIMIT 8
+May 29 18:29:40 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/modules/homepage/templates/indexSuccess.iphone.php"
+May 29 18:29:40 symfony [info] {sfPHPView} Decorate content with "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/templates/layout.iphone.php"
+May 29 18:29:40 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/templates/layout.iphone.php"
+May 29 18:29:40 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 29 18:29:40 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 29 18:29:40 symfony [info] {sfWebDebugLogger} Configuration 3.11 ms (9)
+May 29 18:29:40 symfony [info] {sfWebDebugLogger} Factories 39.92 ms (1)
+May 29 18:29:40 symfony [info] {sfWebDebugLogger} Action "homepage/index" 583.52 ms (1)
+May 29 18:29:40 symfony [info] {sfWebDebugLogger} View "Success" for "homepage/index" 14.39 ms (1)
+May 29 18:29:40 symfony [info] {sfWebResponse} Send content (31663 o)
+May 29 18:33:46 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'homepage',  'action' => 'index',)
+May 29 18:33:46 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 29 18:33:46 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 29 18:33:46 symfony [info] {homepageActions} Call "homepageActions->executeIndex()"
+May 29 18:33:46 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    4.3 MB | mempeak:    4.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 29 18:33:46 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    4.5 MB | mempeak:    4.5 MB | memdelta:      0.0 B | SELECT need.ID, need.AUTHOR, need.DESCRIPTION, need.TIMEFRAME, need.LOCATION, need.CREATED_AT, need.UPDATED_AT FROM `need` ORDER BY need.CREATED_AT ASC LIMIT 8
+May 29 18:33:47 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/modules/homepage/templates/indexSuccess.iphone.php"
+May 29 18:33:47 symfony [info] {sfPHPView} Decorate content with "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/templates/layout.iphone.php"
+May 29 18:33:47 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/templates/layout.iphone.php"
+May 29 18:33:47 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 29 18:33:47 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 29 18:33:47 symfony [info] {sfWebDebugLogger} Configuration 3.00 ms (9)
+May 29 18:33:47 symfony [info] {sfWebDebugLogger} Factories 43.42 ms (1)
+May 29 18:33:47 symfony [info] {sfWebDebugLogger} Action "homepage/index" 517.35 ms (1)
+May 29 18:33:47 symfony [info] {sfWebDebugLogger} View "Success" for "homepage/index" 18.52 ms (1)
+May 29 18:33:47 symfony [info] {sfWebResponse} Send content (31671 o)
+May 29 18:34:18 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'homepage',  'action' => 'index',)
+May 29 18:34:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 29 18:34:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 29 18:34:18 symfony [info] {homepageActions} Call "homepageActions->executeIndex()"
+May 29 18:34:18 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    4.3 MB | mempeak:    4.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 29 18:34:18 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    4.5 MB | mempeak:    4.5 MB | memdelta:      0.0 B | SELECT need.ID, need.AUTHOR, need.DESCRIPTION, need.TIMEFRAME, need.LOCATION, need.CREATED_AT, need.UPDATED_AT FROM `need` ORDER BY need.CREATED_AT ASC LIMIT 8
+May 29 18:34:19 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/modules/homepage/templates/indexSuccess.iphone.php"
+May 29 18:34:26 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'homepage',  'action' => 'index',)
+May 29 18:34:26 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 29 18:34:26 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 29 18:34:26 symfony [info] {homepageActions} Call "homepageActions->executeIndex()"
+May 29 18:34:26 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    4.3 MB | mempeak:    4.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 29 18:34:26 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    4.5 MB | mempeak:    4.5 MB | memdelta:      0.0 B | SELECT need.ID, need.AUTHOR, need.DESCRIPTION, need.TIMEFRAME, need.LOCATION, need.CREATED_AT, need.UPDATED_AT FROM `need` ORDER BY need.CREATED_AT ASC LIMIT 8
+May 29 18:34:26 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/modules/homepage/templates/indexSuccess.iphone.php"
+May 29 18:34:26 symfony [info] {sfPHPView} Decorate content with "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/templates/layout.iphone.php"
+May 29 18:34:26 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/templates/layout.iphone.php"
+May 29 18:35:26 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'homepage',  'action' => 'index',)
+May 29 18:35:26 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 29 18:35:26 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 29 18:35:26 symfony [info] {homepageActions} Call "homepageActions->executeIndex()"
+May 29 18:35:26 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    4.3 MB | mempeak:    4.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 29 18:35:26 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    4.5 MB | mempeak:    4.5 MB | memdelta:      0.0 B | SELECT need.ID, need.AUTHOR, need.DESCRIPTION, need.TIMEFRAME, need.LOCATION, need.CREATED_AT, need.UPDATED_AT FROM `need` ORDER BY need.CREATED_AT ASC LIMIT 8
+May 29 18:35:27 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/modules/homepage/templates/indexSuccess.iphone.php"
+May 29 18:35:27 symfony [info] {sfPHPView} Decorate content with "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/templates/layout.iphone.php"
+May 29 18:35:27 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/templates/layout.iphone.php"
+May 29 18:35:27 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 29 18:35:27 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 29 18:35:27 symfony [info] {sfWebDebugLogger} Configuration 3.03 ms (9)
+May 29 18:35:27 symfony [info] {sfWebDebugLogger} Factories 39.53 ms (1)
+May 29 18:35:27 symfony [info] {sfWebDebugLogger} Action "homepage/index" 511.19 ms (1)
+May 29 18:35:27 symfony [info] {sfWebDebugLogger} View "Success" for "homepage/index" 14.97 ms (1)
+May 29 18:35:27 symfony [info] {sfWebResponse} Send content (31954 o)
+May 29 18:36:03 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'homepage',  'action' => 'index',)
+May 29 18:36:03 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 29 18:36:03 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 29 18:36:03 symfony [info] {homepageActions} Call "homepageActions->executeIndex()"
+May 29 18:36:03 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    4.3 MB | mempeak:    4.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 29 18:36:03 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    4.5 MB | mempeak:    4.5 MB | memdelta:      0.0 B | SELECT need.ID, need.AUTHOR, need.DESCRIPTION, need.TIMEFRAME, need.LOCATION, need.CREATED_AT, need.UPDATED_AT FROM `need` ORDER BY need.CREATED_AT ASC LIMIT 8
+May 29 18:36:04 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/modules/homepage/templates/indexSuccess.php"
+May 29 18:36:04 symfony [info] {sfPartialView} Render "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/modules/homepage/templates/_needlist.php"
+May 29 18:36:04 symfony [info] {sfPHPView} Decorate content with "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/templates/layout.php"
+May 29 18:36:04 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/templates/layout.php"
+May 29 18:36:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 29 18:36:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 29 18:36:04 symfony [info] {sfWebDebugLogger} Configuration 26.65 ms (10)
+May 29 18:36:04 symfony [info] {sfWebDebugLogger} Factories 35.43 ms (1)
+May 29 18:36:04 symfony [info] {sfWebDebugLogger} Action "homepage/index" 507.48 ms (1)
+May 29 18:36:04 symfony [info] {sfWebDebugLogger} View "Success" for "homepage/index" 41.61 ms (1)
+May 29 18:36:04 symfony [info] {sfWebDebugLogger} Partial "homepage/_needlist" 0.72 ms (1)
+May 29 18:36:04 symfony [info] {sfWebResponse} Send content (36795 o)
+May 29 18:36:09 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'homepage',  'action' => 'index',)
+May 29 18:36:09 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 29 18:36:09 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 29 18:36:09 symfony [info] {homepageActions} Call "homepageActions->executeIndex()"
+May 29 18:36:09 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    4.3 MB | mempeak:    4.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 29 18:36:09 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    4.5 MB | mempeak:    4.5 MB | memdelta:      0.0 B | SELECT need.ID, need.AUTHOR, need.DESCRIPTION, need.TIMEFRAME, need.LOCATION, need.CREATED_AT, need.UPDATED_AT FROM `need` ORDER BY need.CREATED_AT ASC LIMIT 8
+May 29 18:36:09 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/modules/homepage/templates/indexSuccess.iphone.php"
+May 29 18:36:09 symfony [info] {sfPHPView} Decorate content with "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/templates/layout.iphone.php"
+May 29 18:36:09 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/templates/layout.iphone.php"
+May 29 18:36:09 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 29 18:36:09 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 29 18:36:09 symfony [info] {sfWebDebugLogger} Configuration 2.86 ms (9)
+May 29 18:36:09 symfony [info] {sfWebDebugLogger} Factories 34.07 ms (1)
+May 29 18:36:09 symfony [info] {sfWebDebugLogger} Action "homepage/index" 451.34 ms (1)
+May 29 18:36:09 symfony [info] {sfWebDebugLogger} View "Success" for "homepage/index" 12.48 ms (1)
+May 29 18:36:09 symfony [info] {sfWebResponse} Send content (31762 o)
+May 29 18:37:04 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'homepage',  'action' => 'index',)
+May 29 18:37:04 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 29 18:37:04 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 29 18:37:04 symfony [info] {homepageActions} Call "homepageActions->executeIndex()"
+May 29 18:37:04 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    4.3 MB | mempeak:    4.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 29 18:37:04 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    4.5 MB | mempeak:    4.5 MB | memdelta:      0.0 B | SELECT need.ID, need.AUTHOR, need.DESCRIPTION, need.TIMEFRAME, need.LOCATION, need.CREATED_AT, need.UPDATED_AT FROM `need` ORDER BY need.CREATED_AT ASC LIMIT 8
+May 29 18:37:04 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/modules/homepage/templates/indexSuccess.iphone.php"
+May 29 18:37:04 symfony [info] {sfPHPView} Decorate content with "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/templates/layout.iphone.php"
+May 29 18:37:04 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/templates/layout.iphone.php"
+May 29 18:37:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 29 18:37:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 29 18:37:04 symfony [info] {sfWebDebugLogger} Configuration 53.96 ms (10)
+May 29 18:37:04 symfony [info] {sfWebDebugLogger} Factories 43.15 ms (1)
+May 29 18:37:04 symfony [info] {sfWebDebugLogger} Action "homepage/index" 518.17 ms (1)
+May 29 18:37:04 symfony [info] {sfWebDebugLogger} View "Success" for "homepage/index" 67.76 ms (1)
+May 29 18:37:04 symfony [info] {sfWebResponse} Send content (31782 o)
+May 29 18:37:15 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'homepage',  'action' => 'index',)
+May 29 18:37:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 29 18:37:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 29 18:37:15 symfony [info] {homepageActions} Call "homepageActions->executeIndex()"
+May 29 18:37:15 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    4.3 MB | mempeak:    4.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 29 18:37:15 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    4.5 MB | mempeak:    4.5 MB | memdelta:      0.0 B | SELECT need.ID, need.AUTHOR, need.DESCRIPTION, need.TIMEFRAME, need.LOCATION, need.CREATED_AT, need.UPDATED_AT FROM `need` ORDER BY need.CREATED_AT ASC LIMIT 8
+May 29 18:37:16 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/modules/homepage/templates/indexSuccess.php"
+May 29 18:37:16 symfony [info] {sfPartialView} Render "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/modules/homepage/templates/_needlist.php"
+May 29 18:37:16 symfony [info] {sfPHPView} Decorate content with "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/templates/layout.php"
+May 29 18:37:16 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/templates/layout.php"
+May 29 18:37:16 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 29 18:37:16 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 29 18:37:16 symfony [info] {sfWebDebugLogger} Configuration 2.76 ms (9)
+May 29 18:37:16 symfony [info] {sfWebDebugLogger} Factories 33.46 ms (1)
+May 29 18:37:16 symfony [info] {sfWebDebugLogger} Action "homepage/index" 488.55 ms (1)
+May 29 18:37:16 symfony [info] {sfWebDebugLogger} View "Success" for "homepage/index" 16.66 ms (1)
+May 29 18:37:16 symfony [info] {sfWebDebugLogger} Partial "homepage/_needlist" 0.71 ms (1)
+May 29 18:37:16 symfony [info] {sfWebResponse} Send content (36801 o)
+May 29 18:37:48 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'homepage',  'action' => 'index',)
+May 29 18:37:48 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 29 18:37:48 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 29 18:37:48 symfony [info] {homepageActions} Call "homepageActions->executeIndex()"
+May 29 18:37:48 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    4.3 MB | mempeak:    4.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 29 18:37:48 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    4.5 MB | mempeak:    4.5 MB | memdelta:      0.0 B | SELECT need.ID, need.AUTHOR, need.DESCRIPTION, need.TIMEFRAME, need.LOCATION, need.CREATED_AT, need.UPDATED_AT FROM `need` ORDER BY need.CREATED_AT ASC LIMIT 8
+May 29 18:37:48 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/modules/homepage/templates/indexSuccess.php"
+May 29 18:37:48 symfony [info] {sfPartialView} Render "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/modules/homepage/templates/_needlist.php"
+May 29 18:37:48 symfony [info] {sfPHPView} Decorate content with "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/templates/layout.php"
+May 29 18:37:48 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/templates/layout.php"
+May 29 18:37:48 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 29 18:37:48 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 29 18:37:48 symfony [info] {sfWebDebugLogger} Configuration 2.98 ms (9)
+May 29 18:37:48 symfony [info] {sfWebDebugLogger} Factories 43.33 ms (1)
+May 29 18:37:48 symfony [info] {sfWebDebugLogger} Action "homepage/index" 549.13 ms (1)
+May 29 18:37:48 symfony [info] {sfWebDebugLogger} View "Success" for "homepage/index" 18.09 ms (1)
+May 29 18:37:48 symfony [info] {sfWebDebugLogger} Partial "homepage/_needlist" 0.88 ms (1)
+May 29 18:37:48 symfony [info] {sfWebResponse} Send content (36801 o)
+May 29 18:37:52 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'homepage',  'action' => 'index',)
+May 29 18:37:53 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 29 18:37:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 29 18:37:53 symfony [info] {homepageActions} Call "homepageActions->executeIndex()"
+May 29 18:37:53 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    4.3 MB | mempeak:    4.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 29 18:37:53 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    4.5 MB | mempeak:    4.5 MB | memdelta:      0.0 B | SELECT need.ID, need.AUTHOR, need.DESCRIPTION, need.TIMEFRAME, need.LOCATION, need.CREATED_AT, need.UPDATED_AT FROM `need` ORDER BY need.CREATED_AT ASC LIMIT 8
+May 29 18:37:53 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/modules/homepage/templates/indexSuccess.php"
+May 29 18:37:53 symfony [info] {sfPartialView} Render "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/modules/homepage/templates/_needlist.php"
+May 29 18:37:53 symfony [info] {sfPHPView} Decorate content with "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/templates/layout.php"
+May 29 18:37:53 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/templates/layout.php"
+May 29 18:37:53 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 29 18:37:53 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 29 18:37:53 symfony [info] {sfWebDebugLogger} Configuration 3.08 ms (9)
+May 29 18:37:53 symfony [info] {sfWebDebugLogger} Factories 42.47 ms (1)
+May 29 18:37:53 symfony [info] {sfWebDebugLogger} Action "homepage/index" 510.51 ms (1)
+May 29 18:37:53 symfony [info] {sfWebDebugLogger} View "Success" for "homepage/index" 19.41 ms (1)
+May 29 18:37:53 symfony [info] {sfWebDebugLogger} Partial "homepage/_needlist" 1.00 ms (1)
+May 29 18:37:53 symfony [info] {sfWebResponse} Send content (36801 o)
+May 29 18:38:01 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'homepage',  'action' => 'index',)
+May 29 18:38:01 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 29 18:38:01 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 29 18:38:01 symfony [info] {homepageActions} Call "homepageActions->executeIndex()"
+May 29 18:38:01 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    4.3 MB | mempeak:    4.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 29 18:38:01 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    4.5 MB | mempeak:    4.5 MB | memdelta:      0.0 B | SELECT need.ID, need.AUTHOR, need.DESCRIPTION, need.TIMEFRAME, need.LOCATION, need.CREATED_AT, need.UPDATED_AT FROM `need` ORDER BY need.CREATED_AT ASC LIMIT 8
+May 29 18:38:01 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/modules/homepage/templates/indexSuccess.iphone.php"
+May 29 18:38:01 symfony [info] {sfPHPView} Decorate content with "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/templates/layout.iphone.php"
+May 29 18:38:01 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/templates/layout.iphone.php"
+May 29 18:38:01 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 29 18:38:01 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 29 18:38:01 symfony [info] {sfWebDebugLogger} Configuration 3.20 ms (9)
+May 29 18:38:01 symfony [info] {sfWebDebugLogger} Factories 41.75 ms (1)
+May 29 18:38:01 symfony [info] {sfWebDebugLogger} Action "homepage/index" 468.20 ms (1)
+May 29 18:38:01 symfony [info] {sfWebDebugLogger} View "Success" for "homepage/index" 18.16 ms (1)
+May 29 18:38:02 symfony [info] {sfWebResponse} Send content (31780 o)
+May 29 18:39:08 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'homepage',  'action' => 'index',)
+May 29 18:39:08 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 29 18:39:08 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 29 18:39:08 symfony [info] {homepageActions} Call "homepageActions->executeIndex()"
+May 29 18:39:08 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    4.3 MB | mempeak:    4.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 29 18:39:08 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    4.5 MB | mempeak:    4.5 MB | memdelta:      0.0 B | SELECT need.ID, need.AUTHOR, need.DESCRIPTION, need.TIMEFRAME, need.LOCATION, need.CREATED_AT, need.UPDATED_AT FROM `need` ORDER BY need.CREATED_AT ASC LIMIT 8
+May 29 18:39:08 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/modules/homepage/templates/indexSuccess.iphone.php"
+May 29 18:39:08 symfony [info] {sfPHPView} Decorate content with "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/templates/layout.iphone.php"
+May 29 18:39:08 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/templates/layout.iphone.php"
+May 29 18:39:08 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 29 18:39:08 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 29 18:39:08 symfony [info] {sfWebDebugLogger} Configuration 2.72 ms (9)
+May 29 18:39:08 symfony [info] {sfWebDebugLogger} Factories 33.60 ms (1)
+May 29 18:39:08 symfony [info] {sfWebDebugLogger} Action "homepage/index" 542.61 ms (1)
+May 29 18:39:08 symfony [info] {sfWebDebugLogger} View "Success" for "homepage/index" 14.94 ms (1)
+May 29 18:39:08 symfony [info] {sfWebResponse} Send content (31919 o)
+May 29 18:40:22 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'homepage',  'action' => 'index',)
+May 29 18:40:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 29 18:40:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 29 18:40:22 symfony [info] {homepageActions} Call "homepageActions->executeIndex()"
+May 29 18:40:22 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    4.3 MB | mempeak:    4.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 29 18:40:22 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    4.5 MB | mempeak:    4.5 MB | memdelta:      0.0 B | SELECT need.ID, need.AUTHOR, need.DESCRIPTION, need.TIMEFRAME, need.LOCATION, need.CREATED_AT, need.UPDATED_AT FROM `need` ORDER BY need.CREATED_AT ASC LIMIT 8
+May 29 18:40:22 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/modules/homepage/templates/indexSuccess.iphone.php"
+May 29 18:40:22 symfony [info] {sfPHPView} Decorate content with "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/templates/layout.iphone.php"
+May 29 18:40:22 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/templates/layout.iphone.php"
+May 29 18:40:22 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 29 18:40:22 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 29 18:40:22 symfony [info] {sfWebDebugLogger} Configuration 2.68 ms (9)
+May 29 18:40:22 symfony [info] {sfWebDebugLogger} Factories 33.69 ms (1)
+May 29 18:40:22 symfony [info] {sfWebDebugLogger} Action "homepage/index" 502.83 ms (1)
+May 29 18:40:22 symfony [info] {sfWebDebugLogger} View "Success" for "homepage/index" 15.07 ms (1)
+May 29 18:40:22 symfony [info] {sfWebResponse} Send content (32006 o)

@@ -1,0 +1,108 @@
+May 05 15:08:45 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'homepage',  'action' => 'index',)
+May 05 15:08:45 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /homepage/index with parameters array (  'module' => 'homepage',  'action' => 'index',)
+May 05 15:08:45 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+May 05 15:08:45 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 05 15:08:45 symfony [info] {homepageActions} Call "homepageActions->executeIndex()"
+May 05 15:08:45 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+May 05 15:08:45 symfony [debug] {sfPropelLogger} SELECT need.ID, need.AUTHOR, need.DESCRIPTION, need.TIMEFRAME, need.LOCATION, need.CREATED_AT, need.UPDATED_AT FROM `need` ORDER BY need.CREATED_AT ASC LIMIT 8
+May 05 15:08:45 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/apps/frontend/modules/homepage/templates/indexSuccess.php"
+May 05 15:08:45 symfony [info] {sfPartialView} Render "/Users/pascaldevink/Development/Projects/twneed/apps/frontend/modules/homepage/templates/_needlist.php"
+May 05 15:08:45 symfony [info] {sfPHPView} Decorate content with "/Users/pascaldevink/Development/Projects/twneed/apps/frontend/templates/layout.php"
+May 05 15:08:45 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/apps/frontend/templates/layout.php"
+May 05 15:08:45 symfony [info] {sfWebResponse} Send content (4532 o)
+May 06 19:52:12 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'homepage',  'action' => 'index',)
+May 06 19:52:12 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /homepage/index with parameters array (  'module' => 'homepage',  'action' => 'index',)
+May 06 19:52:12 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+May 06 19:52:12 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 06 19:52:12 symfony [info] {homepageActions} Call "homepageActions->executeIndex()"
+May 06 19:52:12 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+May 06 19:52:12 symfony [debug] {sfPropelLogger} SELECT need.ID, need.AUTHOR, need.DESCRIPTION, need.TIMEFRAME, need.LOCATION, need.CREATED_AT, need.UPDATED_AT FROM `need` ORDER BY need.CREATED_AT ASC LIMIT 8
+May 06 19:52:12 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/apps/frontend/modules/homepage/templates/indexSuccess.php"
+May 06 19:52:12 symfony [info] {sfPartialView} Render "/Users/pascaldevink/Development/Projects/twneed/apps/frontend/modules/homepage/templates/_needlist.php"
+May 06 19:52:12 symfony [info] {sfPHPView} Decorate content with "/Users/pascaldevink/Development/Projects/twneed/apps/frontend/templates/layout.php"
+May 06 19:52:12 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/apps/frontend/templates/layout.php"
+May 06 19:52:12 symfony [info] {sfWebResponse} Send content (4532 o)
+May 06 19:53:48 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'homepage',  'action' => 'index',)
+May 06 19:53:48 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /homepage/index with parameters array (  'module' => 'homepage',  'action' => 'index',)
+May 06 19:53:48 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+May 06 19:53:48 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 06 19:53:48 symfony [info] {homepageActions} Call "homepageActions->executeIndex()"
+May 06 19:53:48 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+May 06 19:53:48 symfony [debug] {sfPropelLogger} SELECT need.ID, need.AUTHOR, need.DESCRIPTION, need.TIMEFRAME, need.LOCATION, need.CREATED_AT, need.UPDATED_AT FROM `need` ORDER BY need.CREATED_AT ASC LIMIT 8
+May 06 19:53:48 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/apps/frontend/modules/homepage/templates/indexSuccess.php"
+May 06 19:53:48 symfony [info] {sfPartialView} Render "/Users/pascaldevink/Development/Projects/twneed/apps/frontend/modules/homepage/templates/_needlist.php"
+May 06 19:53:48 symfony [info] {sfPHPView} Decorate content with "/Users/pascaldevink/Development/Projects/twneed/apps/frontend/templates/layout.php"
+May 06 19:53:48 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/apps/frontend/templates/layout.php"
+May 06 19:53:48 symfony [info] {sfWebResponse} Send content (4532 o)
+May 06 19:58:23 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'homepage',  'action' => 'index',)
+May 06 19:58:23 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /homepage/index with parameters array (  'module' => 'homepage',  'action' => 'index',)
+May 06 19:58:23 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+May 06 19:58:23 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 06 19:58:23 symfony [info] {homepageActions} Call "homepageActions->executeIndex()"
+May 06 19:58:23 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+May 06 19:58:23 symfony [debug] {sfPropelLogger} SELECT need.ID, need.AUTHOR, need.DESCRIPTION, need.TIMEFRAME, need.LOCATION, need.CREATED_AT, need.UPDATED_AT FROM `need` ORDER BY need.CREATED_AT ASC LIMIT 8
+May 06 19:58:24 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/apps/frontend/modules/homepage/templates/indexSuccess.php"
+May 06 19:58:24 symfony [info] {sfPartialView} Render "/Users/pascaldevink/Development/Projects/twneed/apps/frontend/modules/homepage/templates/_needlist.php"
+May 06 19:58:24 symfony [info] {sfPHPView} Decorate content with "/Users/pascaldevink/Development/Projects/twneed/apps/frontend/templates/layout.php"
+May 06 19:58:24 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/apps/frontend/templates/layout.php"
+May 06 19:58:24 symfony [info] {sfWebResponse} Send content (4532 o)
+May 06 19:58:50 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'homepage',  'action' => 'index',)
+May 06 19:58:51 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /homepage/index with parameters array (  'module' => 'homepage',  'action' => 'index',)
+May 06 19:58:51 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+May 06 19:58:51 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 06 19:58:51 symfony [info] {homepageActions} Call "homepageActions->executeIndex()"
+May 06 19:58:51 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+May 06 19:58:51 symfony [debug] {sfPropelLogger} SELECT need.ID, need.AUTHOR, need.DESCRIPTION, need.TIMEFRAME, need.LOCATION, need.CREATED_AT, need.UPDATED_AT FROM `need` ORDER BY need.CREATED_AT ASC LIMIT 8
+May 06 19:58:51 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/apps/frontend/modules/homepage/templates/indexSuccess.php"
+May 06 19:58:51 symfony [info] {sfPartialView} Render "/Users/pascaldevink/Development/Projects/twneed/apps/frontend/modules/homepage/templates/_needlist.php"
+May 06 19:58:51 symfony [info] {sfPHPView} Decorate content with "/Users/pascaldevink/Development/Projects/twneed/apps/frontend/templates/layout.php"
+May 06 19:58:51 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/apps/frontend/templates/layout.php"
+May 06 19:58:51 symfony [info] {sfWebResponse} Send content (4532 o)
+May 06 19:59:08 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'homepage',  'action' => 'index',)
+May 06 19:59:08 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /homepage/index with parameters array (  'module' => 'homepage',  'action' => 'index',)
+May 06 19:59:08 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+May 06 19:59:08 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 06 19:59:08 symfony [info] {homepageActions} Call "homepageActions->executeIndex()"
+May 06 19:59:08 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+May 06 19:59:08 symfony [debug] {sfPropelLogger} SELECT need.ID, need.AUTHOR, need.DESCRIPTION, need.TIMEFRAME, need.LOCATION, need.CREATED_AT, need.UPDATED_AT FROM `need` ORDER BY need.CREATED_AT ASC LIMIT 8
+May 06 19:59:09 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/apps/frontend/modules/homepage/templates/indexSuccess.php"
+May 06 19:59:09 symfony [info] {sfPartialView} Render "/Users/pascaldevink/Development/Projects/twneed/apps/frontend/modules/homepage/templates/_needlist.php"
+May 06 19:59:09 symfony [info] {sfPHPView} Decorate content with "/Users/pascaldevink/Development/Projects/twneed/apps/frontend/templates/layout.php"
+May 06 19:59:09 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/apps/frontend/templates/layout.php"
+May 06 19:59:09 symfony [info] {sfWebResponse} Send content (4532 o)
+May 06 19:59:16 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'homepage',  'action' => 'index',)
+May 06 19:59:16 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /homepage/index with parameters array (  'module' => 'homepage',  'action' => 'index',)
+May 06 19:59:16 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+May 06 19:59:16 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 06 19:59:16 symfony [info] {homepageActions} Call "homepageActions->executeIndex()"
+May 06 19:59:16 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+May 06 19:59:16 symfony [debug] {sfPropelLogger} SELECT need.ID, need.AUTHOR, need.DESCRIPTION, need.TIMEFRAME, need.LOCATION, need.CREATED_AT, need.UPDATED_AT FROM `need` ORDER BY need.CREATED_AT ASC LIMIT 8
+May 06 19:59:16 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/apps/frontend/modules/homepage/templates/indexSuccess.php"
+May 06 19:59:16 symfony [info] {sfPartialView} Render "/Users/pascaldevink/Development/Projects/twneed/apps/frontend/modules/homepage/templates/_needlist.php"
+May 06 19:59:16 symfony [info] {sfPHPView} Decorate content with "/Users/pascaldevink/Development/Projects/twneed/apps/frontend/templates/layout.php"
+May 06 19:59:16 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/apps/frontend/templates/layout.php"
+May 06 19:59:16 symfony [info] {sfWebResponse} Send content (4532 o)
+May 06 20:07:13 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'homepage',  'action' => 'index',)
+May 06 20:07:13 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /homepage/index with parameters array (  'module' => 'homepage',  'action' => 'index',)
+May 06 20:07:13 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+May 06 20:07:13 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 06 20:07:13 symfony [info] {homepageActions} Call "homepageActions->executeIndex()"
+May 06 20:07:13 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+May 06 20:07:13 symfony [debug] {sfPropelLogger} SELECT need.ID, need.AUTHOR, need.DESCRIPTION, need.TIMEFRAME, need.LOCATION, need.CREATED_AT, need.UPDATED_AT FROM `need` ORDER BY need.CREATED_AT ASC LIMIT 8
+May 06 20:07:13 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/apps/frontend/modules/homepage/templates/indexSuccess.php"
+May 06 20:07:13 symfony [info] {sfPartialView} Render "/Users/pascaldevink/Development/Projects/twneed/apps/frontend/modules/homepage/templates/_needlist.php"
+May 06 20:07:13 symfony [info] {sfPHPView} Decorate content with "/Users/pascaldevink/Development/Projects/twneed/apps/frontend/templates/layout.php"
+May 06 20:07:13 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/apps/frontend/templates/layout.php"
+May 06 20:07:13 symfony [info] {sfWebResponse} Send content (4532 o)
+May 29 23:25:01 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'homepage',  'action' => 'index',)
+May 29 23:25:01 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /homepage/index with parameters array (  'module' => 'homepage',  'action' => 'index',)
+May 29 23:25:01 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+May 29 23:25:01 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 29 23:25:01 symfony [info] {homepageActions} Call "homepageActions->executeIndex()"
+May 29 23:25:01 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+May 29 23:25:01 symfony [debug] {sfPropelLogger} SELECT need.ID, need.AUTHOR, need.DESCRIPTION, need.TIMEFRAME, need.LOCATION, need.CREATED_AT, need.UPDATED_AT FROM `need` ORDER BY need.CREATED_AT ASC LIMIT 8
+May 29 23:25:02 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/modules/homepage/templates/indexSuccess.php"
+May 29 23:25:02 symfony [info] {sfPartialView} Render "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/modules/homepage/templates/_needlist.php"
+May 29 23:25:02 symfony [info] {sfPHPView} Decorate content with "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/templates/layout.php"
+May 29 23:25:02 symfony [info] {sfPHPView} Render "/Users/pascaldevink/Development/Projects/twneed/src/apps/frontend/templates/layout.php"
+May 29 23:25:02 symfony [info] {sfWebResponse} Send content (6189 o)

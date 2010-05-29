@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="twneed" default="test">
+
+    <!-- ============================================  -->
+    <!-- Target: test-prepare                          -->
+    <!-- ============================================  -->
+    <target name="test-prepare">
+        <echo msg="Making directory test/reports" />
+        <mkdir dir="test/reports" />
+    </target>
+
+    <!-- ============================================  -->
+    <!-- Target: test                                  -->
+    <!-- Currently uses Lime instead of PHPUnit        -->
+    <!-- ============================================  -->
+    <target name="test" depends="test-prepare">
+        <echo msg="Starting Lime tests" />
+        <exec command="./src/symfony test:all" logoutput="true" />
+    </target>
+
+    <target name="prepare">
+        <echo msg="Making directory ./build" />
+        <mkdir dir="./build" />
+    </target>
+
+    <target name="copy" depends="prepare">
+        <echo msg="Copying all files to ./build" />
+        <copy todir="./build" >
+            <fileset dir="./src">
+                <include name="**/*.html"/>
+                <include name="**/*.php"/>
+                <include name="**/*.xml"/>
+                <include name="**/*.yml"/>
+                <include name="**/*.txt"/>
+                <include name="**/*.ini"/>
+                <include name="**/*.sql"/>
+                <include name="**/*.map"/>
+                <include name="**/*.js"/>
+                <include name="**/*.css"/>
+                <include name="**/*.png"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="clean" depends="copy">
+        <echo msg="Cleaning the cache and logs" />
+        <delete dir="./build/cache" includeemptydirs="true" verbose="false" failonerror="false" />
+        <delete dir="./build/log" includeemptydirs="true" verbose="false" failonerror="false" />
+        <mkdir dir="./build/cache" />
+        <mkdir dir="./build/log" />
+        <chmod file="./build/cache" mode="0777" />
+        <chmod file="./build/log" mode="0777" />
+    </target>
+
+    <target name="dist-test" depends="clean">
+        <echo msg="Distributing to test machine" />
+    </target>
+</project>
