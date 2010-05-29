@@ -1,1 +1,0 @@
-<?php include_partial('homepage/needlist', array('needs' => $needs)) ?>
