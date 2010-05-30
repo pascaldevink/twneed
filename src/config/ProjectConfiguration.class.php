@@ -15,10 +15,11 @@ class ProjectConfiguration extends sfProjectConfiguration
         $this->enablePlugins('sfPropelPlugin');
         $this->enablePlugins('sfGuardPlugin');
         $this->enablePlugins('sfTwitterClientPlugin');
+        $this->enablePlugins('sfPHPUnit2Plugin');
 
         $this->dispatcher->connect('request.filter_parameters', array($this, 'filterRequestParameters'));
         $this->dispatcher->connect('view.configure_format', array($this, 'configureIPhoneFormat'));
-    }
+  }
 
     public function filterRequestParameters(sfEvent $event, $parameters)
     {

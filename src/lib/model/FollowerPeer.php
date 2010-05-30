@@ -19,7 +19,7 @@
 class FollowerPeer extends BaseFollowerPeer
 {
 
-    public static function createFollower(array $rawfollower, PropelPDO $con = null)
+    public static function createFollower($service, array $rawfollower, PropelPDO $con = null)
     {
         $crit = new Criteria();
         $crit->add(self::SENDER_ID, $rawfollower['id']);
@@ -28,10 +28,9 @@ class FollowerPeer extends BaseFollowerPeer
 
         if (is_null($follower))
         {
-            $t = new Twitter(sfConfig::get('twitter_username'), sfConfig::get('twitter_password'));
-            if (!$t->existsFriendship(sfConfig::get('twitter_user_id'), $rawfollower['id']))
+            if (!$service->existsFriendship(sfConfig::get('twitter_user_id'), $rawfollower['id']))
             {
-                $t->createFriendship($rawfollower['id']);
+                $service->createFriendship($rawfollower['id']);
             }
 
             $follower = new Follower();

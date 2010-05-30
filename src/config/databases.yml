@@ -5,8 +5,12 @@ dev:
       debug: { realmemoryusage: true, details: { time: { enabled: true }, slow: { enabled: true, threshold: 0.1 }, mem: { enabled: true }, mempeak: { enabled: true }, memdelta: { enabled: true } } }
 test:
   propel:
+    class: sfPropelDatabase
     param:
       classname: DebugPDO
+      dsn: 'mysql:host=localhost;dbname=twitterineed_test'
+      username: root
+      password: null
 all:
   propel:
     class: sfPropelDatabase
@@ -14,7 +18,7 @@ all:
       classname: PropelPDO
       dsn: 'mysql:host=localhost;dbname=twitterineed'
       username: root
-      password: 
+      password: null
       encoding: utf8
       persistent: true
       pooling: true
