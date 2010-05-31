@@ -2,6 +2,10 @@
 
 <project name="twneed" default="test">
 
+    <property name="srcdir"   value="${project.basedir}/src/"           override="true" />
+    <property name="builddir" value="${project.basedir}/build/"         override="true" />
+    <property name="testdir"  value="${project.basedir}/test/"          override="true" />
+
     <!-- ============================================  -->
     <!-- Target: test-prepare                          -->
     <!-- ============================================  -->
@@ -12,11 +16,22 @@
 
     <!-- ============================================  -->
     <!-- Target: test                                  -->
-    <!-- Currently uses Lime instead of PHPUnit        -->
     <!-- ============================================  -->
     <target name="test" depends="test-prepare">
-        <echo msg="Starting Lime tests" />
-        <exec command="./src/symfony test:all" logoutput="true" />
+        <echo msg="Starting PHPUnit tests" />
+        <exec command="php ${srcdir}/symfony phpunit:test-all --options=&quot;--log-junit ${testdir}/test.xml&quot;" logoutput="true" />
+
+        <available file="${testdir}/test.xml" property="test_xml_exists" value="Yes"/>
+
+        <echo msg="${test_xml_exists}" />
+        <if>
+            <equals arg1="${test_xml_exists}" arg2="1" />
+            <then>
+                <phpunitreport infile="${testdir}/test.xml"
+                    format="frames"
+                    todir="${testdir}/reports/" />
+            </then>
+        </if>
     </target>
 
     <target name="prepare">
