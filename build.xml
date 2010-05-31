@@ -12,6 +12,8 @@
     <target name="test-prepare">
         <echo msg="Making directory test/reports" />
         <mkdir dir="test/reports" />
+
+        <exec command="php ${srcdir}/symfony cc" logoutput="false" />
     </target>
 
     <!-- ============================================  -->
