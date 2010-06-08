@@ -16,9 +16,8 @@
             <div class="container">
                 <a href="/"><img width="107" height="24" alt="twitterineed" src="/images/logo.png" /></a>
                 <div class="links">
-                    <a href="/about">About TwitterINeed</a>
-                    <a href="/#">Interesting link</a>
-                    <a href="/#">Another interesting link</a>
+                    <a href="/">Home</a>
+                    <a href="/is">What is TwitterINeed</a>
                 </div>
             </div>
         </div>

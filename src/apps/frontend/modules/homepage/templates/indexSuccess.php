@@ -25,12 +25,14 @@
             <li>at<br />&lt;your location&gt;</li>
         </ol>
 
-        <p><h2>Need a little more privacy?</h2>
+        <!--<p>
+            <h2>Need a little more privacy?</h2>
             Sure thing! We think privacy is important, specially when it comes to your needs.<br />
             <br />
             That is why you can also send us a direct message with your need. Whenever a user replies to your need, that reply
             will be forwarded to you by direct message. This way, nobody knows who you are untill you are ready to reveal yourself.<br />
             <br />
             Send your message in the same style and order as a normal message and your privacy is guaranteed.
+        </p>-->
     </div>
 </div>

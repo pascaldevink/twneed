@@ -10,11 +10,6 @@ ajax_update:
   url:  /update
   param: { module: homepage, action: update }
 
-# generic rules
-# please, remove them by adding more specific rules
-default_index:
-  url:   /:module
-  param: { action: index }
-
-default:
-  url:   /:module/:action/*
+about:
+  url: /is
+  param: { module: homepage, action: about }

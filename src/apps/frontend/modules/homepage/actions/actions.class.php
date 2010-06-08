@@ -27,4 +27,9 @@ class homepageActions extends sfActions
     {
         $this->needs = NeedPeer::retrieveLatestNeeds();
     }
+
+    public function executeAbout(sfWebRequest $request)
+    {
+        
+    }
 }
